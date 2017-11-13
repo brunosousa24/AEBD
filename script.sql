@@ -2,19 +2,6 @@ CREATE TABLESPACE user_table
 DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\user_tables_01.dbf'
 SIZE 100M
 
-CREATE TABLESPACE employyes_table
-DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\employyes_tables_01.dbf'
-SIZE 100M
-
-CREATE TABLESPACE jobs_table
-DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\jobs_tables_01.dbf'
-SIZE 100M
-
-CREATE TABLESPACE departaments_table
-DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\departaments_tables_01.dbf'
-SIZE 100M
-
-
 CREATE USER User1
 IDENTIFIED BY User1
 DEFAULT TABLESPACE user_table
@@ -29,3 +16,42 @@ CREATE USER User3
 IDENTIFIED BY User3
 DEFAULT TABLESPACE user_table
 TEMPORARY TABLESPACE
+
+GRANT CONNECT TO User1;
+GRANT CONNECT TO User2;
+GRANT CONNECT TO User3;
+
+--SELECT * FROM dba_users
+
+GRANT CREATE TRIGGER TO User1
+GRANT CREATE sequence TO User1
+GRANT CREATE session TO	User1
+GRANT CREATE table TO	User1
+GRANT CREATE view TO User1	
+GRANT CREATE procedure TO	User1
+GRANT CREATE synonym TO User1
+GRANT ALTER ANY table TO User1
+GRANT ALTER ANY view TO User1
+GRANT ALTER ANY procedure TO User1
+
+GRANT CREATE TRIGGER TO User2
+GRANT CREATE sequence TO User2
+GRANT CREATE session TO	User2
+GRANT CREATE table TO User2
+GRANT CREATE view TO User2	
+GRANT CREATE procedure TO User2
+GRANT CREATE synonym TO User2
+GRANT ALTER ANY table TO User2
+GRANT ALTER ANY view TO User2
+GRANT ALTER ANY procedure TO User2
+
+GRANT CREATE TRIGGER TO User3
+GRANT CREATE sequence TO User3
+GRANT CREATE session TO	User3
+GRANT CREATE table TO User3
+GRANT CREATE view TO User3	
+GRANT CREATE procedure TO User3
+GRANT CREATE synonym TO User3
+GRANT ALTER ANY table TO User3
+GRANT ALTER ANY view TO User3
+GRANT ALTER ANY procedure TO User3
