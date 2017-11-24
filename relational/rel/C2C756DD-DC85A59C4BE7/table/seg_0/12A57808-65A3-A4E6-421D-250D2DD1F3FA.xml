@@ -1,0 +1,114 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="12A57808-65A3-A4E6-421D-250D2DD1F3FA" schemaObject="B707C4A2-3F5E-AE48-7BDB-20B3AC93FB5B" name="HOSPITAL_MEDICO">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>HOSPITAL_MEDICO</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>FB494949-4A35-0B8A-3E90-5560090BD4EF</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_HM" id="098A07F4-E809-ED66-6A17-7161847E25D4">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL_MEDICO</sourceObjSchema>
+<sourceObjName>ID_HM</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>6F7BC754-36B7-3778-A6A8-CCF62F75D2D1</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_HOSPITAL" id="53E5195C-310A-3571-6560-C5CA733FC169">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL_MEDICO</sourceObjSchema>
+<sourceObjName>ID_HOSPITAL</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>AFF213A6-D575-9696-3ED9-02CB5AC1B0BF</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0A20DCAC-50A1-6BC2-7D3C-B9D63548A16F" referredColumn="AACC03C4-1979-A875-B552-8B6DF20D18C2"/>
+</associations>
+</Column>
+<Column name="ID_MEDICO" id="86E89227-A41B-1F56-36BF-C8A5B76A05BC">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL_MEDICO</sourceObjSchema>
+<sourceObjName>ID_MEDICO</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>094D8090-E874-82A4-B4DB-C04E975046ED</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2F141ECA-562F-CD6D-958A-76F4BAD95D80" referredColumn="C2A934D6-F82D-57D1-F88D-15A8F75E8BD0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9E6E2E87-806A-66F3-0CF8-2854451E5718" name="HOSPITAL_MEDICO_PK">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>HOSPITAL_MEDICO_PK</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>41B97B8D-F10B-DB86-FE1D-706155197793</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="098A07F4-E809-ED66-6A17-7161847E25D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5CC251D3-8A91-AFD5-0A3B-258C7B71C945" schemaObject="B707C4A2-3F5E-AE48-7BDB-20B3AC93FB5B" name="HOSPITAL_MEDICO_PK">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>HOSPITAL_MEDICO_PK</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>C8D6597C-6AA8-050A-0642-70AC2FA6B803</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="098A07F4-E809-ED66-6A17-7161847E25D4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="329D7BBD-4171-FD93-E1BB-4588CFE88E56" name="HOSPITAL_MEDICO_FK1">
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:07 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="53E5195C-310A-3571-6560-C5CA733FC169"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7FD1E5C9-7A61-B8CD-F3B4-07B0C0D862BF" name="HOSPITAL_MEDICO_FK2">
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:07 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86E89227-A41B-1F56-36BF-C8A5B76A05BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

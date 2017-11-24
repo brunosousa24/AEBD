@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0E960DE2-25FB-0307-AEA2-2D9E2F1E00E7" schemaObject="B707C4A2-3F5E-AE48-7BDB-20B3AC93FB5B" name="ESPECIALIDADE">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>ESPECIALIDADE</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>37AC3F35-B67E-3741-1FFF-D1AB6D730AD8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ESPECIALIDADE" id="3C882697-0025-EBCD-2CA8-51D069517F4D">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>ESPECIALIDADE</sourceObjSchema>
+<sourceObjName>ID_ESPECIALIDADE</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>22E4FB4B-4DB9-C89E-EB50-6A3E37F6B086</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO" id="DAF1ED14-B5B4-3AD2-EDFD-88F4F91342EB">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>ESPECIALIDADE</sourceObjSchema>
+<sourceObjName>DESCRICAO</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>C28137A4-856C-693E-E313-CB2845453D37</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="26F9F0FD-97D9-0C5F-FB86-9CECC90DF2EA" name="ESPECIALIDADE_PK">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>ESPECIALIDADE_PK</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>AFCDC549-EDC3-B1B5-3B6C-F35FDC445F9F</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C882697-0025-EBCD-2CA8-51D069517F4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="430B8AB7-DDAB-EDC2-9486-F5885A3173E9" schemaObject="B707C4A2-3F5E-AE48-7BDB-20B3AC93FB5B" name="ESPECIALIDADE_PK">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>ESPECIALIDADE_PK</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>78DEB877-B6FE-37BD-CF45-7FA6E5DE9D6F</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C882697-0025-EBCD-2CA8-51D069517F4D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
