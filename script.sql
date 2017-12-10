@@ -1,32 +1,31 @@
-CREATE TABLESPACE user_table
-DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\user_tables_01.dbf'
+CREATE TABLESPACE work_table
+DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\work_tables_01.dbf'
 SIZE 100M
 
-CREATE TEMPORARY TABLESPACE user_temp
-TEMPFILE '\u01\app\oracle\oradata\orcl12\orcl\user_temp.dbf'
+
+CREATE TEMPORARY TABLESPACE work_temp
+TEMPFILE '\u01\app\oracle\oradata\orcl12\orcl\work_temp.dbf'
 SIZE 100M
 AUTOEXTEND ON 
 
-CREATE USER User1
-IDENTIFIED BY User1
-DEFAULT TABLESPACE user_table
-TEMPORARY TABLESPACE user_temp
+CREATE USER Work
+IDENTIFIED BY work1
+DEFAULT TABLESPACE work_table
+TEMPORARY TABLESPACE work_temp
 
-GRANT CONNECT TO User1;
+GRANT CONNECT TO Work;
 
 
 
 --SELECT * FROM dba_users
 
-GRANT CREATE TRIGGER TO User1;
-GRANT CREATE TABLESPACE User1;
-GRANT CREATE sequence TO User1;
-GRANT CREATE session TO	User1;
-GRANT CREATE table TO	User1;
-GRANT CREATE view TO User1	;
-GRANT CREATE procedure TO	User1;
-GRANT CREATE synonym TO User1;
-GRANT ALTER ANY table TO User1;
---GRANT ALTER ANY view TO User1;
-GRANT ALTER ANY procedure TO User1;
+GRANT CREATE TRIGGER TO Work;
+GRANT CREATE sequence TO Work;
+GRANT CREATE session TO	Work;
+GRANT CREATE table TO	Work;
+GRANT CREATE view TO Work;
+GRANT CREATE procedure TO Work;
+GRANT CREATE synonym TO Work;
+GRANT ALTER ANY table TO Work;
+GRANT ALTER ANY procedure TO Work;
 
