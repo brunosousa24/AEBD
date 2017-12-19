@@ -1,17 +1,17 @@
 CREATE TABLESPACE work_table
 DATAFILE  '\u01\app\oracle\oradata\orcl12\orcl\work_tables_01.dbf'
-SIZE 100M
+SIZE 100M;
 
 
 CREATE TEMPORARY TABLESPACE work_temp
 TEMPFILE '\u01\app\oracle\oradata\orcl12\orcl\work_temp.dbf'
 SIZE 100M
-AUTOEXTEND ON 
+AUTOEXTEND ON;
 
 CREATE USER Work
 IDENTIFIED BY work1
 DEFAULT TABLESPACE work_table
-TEMPORARY TABLESPACE work_temp
+TEMPORARY TABLESPACE work_temp;
 
 GRANT CONNECT TO Work;
 
