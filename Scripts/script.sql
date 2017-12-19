@@ -22,7 +22,7 @@ GRANT CONNECT TO Work;
 GRANT CREATE TRIGGER TO Work;
 GRANT CREATE sequence TO Work;
 GRANT CREATE session TO	Work;
-GRANT CREATE table TO	Work;
+GRANT CREATE table TO Work;
 GRANT CREATE view TO Work;
 GRANT CREATE procedure TO Work;
 GRANT CREATE synonym TO Work;
