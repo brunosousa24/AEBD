@@ -14,13 +14,12 @@ import java.util.logging.Logger;
  */
 public class ConnectionDB{
     
-    Connection sys;
-    Connection work;
+    Connection sys, work;
     
     public ConnectionDB () {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            System.out.println("Connections :: START");
+            System.out.println("Connection :: START");
             this.sys = DriverManager.getConnection("jdbc:oracle:thin:sys/sys@localhost:1521/orcl","sys as sysdba","oracle");
             System.out.println("Connection :: SYS");
             this.work = DriverManager.getConnection("jdbc:oracle:thin:Work/Work@localhost:1521/orcl","Work","work1");

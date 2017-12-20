@@ -1,5 +1,7 @@
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -22,6 +24,19 @@ public class fillROLES implements Runnable {
     @Override
     public void run() {
         System.out.println("ROLES :: START");
+        try {Statement stmt1 = sys.createStatement();
+            Statement stmt2 = work.createStatement();
+            ResultSet rs1= stmt1.executeQuery("SELECT DBA_ROLES.ROLE_ID, DBA_ROLES.ROLE "
+                                            + "FROM DBA_ROLES");
+            System.out.println("ROLES :: FILLING");
+            while(rs1.next()) {
+                stmt2.executeUpdate("INSERT INTO ROLES "
+                                   + "VALUES ("+rs1.getInt(1)+", '"+rs1.getString(2)+"',null)");
+            }
+            System.out.println("ROLES :: COMPLETED");
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
     
 }

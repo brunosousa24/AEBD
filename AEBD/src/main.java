@@ -23,6 +23,11 @@ public class main {
         Connection work = con.getWork();
         
         
+        System.out.println("::::START CLEANING OUR DB::::");
+        clearTables(work);
+        System.out.println("::::END CLEANING OUR DB::::");
+        
+        System.out.println("::::START FILLING OUR DB::::");
         //Fills Tablespaces
         Thread t1 = new Thread(new fillTABLESPACES(sys,work));
         t1.start();
@@ -48,42 +53,19 @@ public class main {
         t4.join();
         t5.join();
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        /*
-        Connection sys = null;
-        Connection work = null;
-        try{
-            System.out.println("Connection with SYS:");
-            sys = ConectionSys.connect();
-            Statement stmt1= sys.createStatement();
-            ResultSet rs1=stmt1.executeQuery("select * from DBA_USERS");  
-            while(rs1.next())
-                System.out.println(rs1.getString(1)+"\t"+rs1.getInt(2));
-            sys.close();  
-  
-            
-            
-            
-            
-            System.out.println("Connection with WORK:");
-            work = ConectionWork.connect();
-            Statement stmt2=work.createStatement();  
-            ResultSet rs2=stmt2.executeQuery("select * from TABLESPACES");
-            while(rs2.next())
-                System.out.println(rs2.getInt(1)+"\t"+rs2.getString(2));  
-            work.close();
-        
-        
-        }catch(Exception e){
-            System.out.println(e);
-        }*/
+        System.out.println("::::END FILLING OUR DB::::");
+       
+        sys.close();
+        work.close();
+        System.out.println("Connection :: CLOSED");
+    }
+
+    private static void clearTables(Connection work) throws SQLException {
+        Statement stmt = work.createStatement();
+        stmt.executeUpdate("DELETE FROM USERS_ROLES");
+        stmt.executeUpdate("DELETE FROM USERS");
+        stmt.executeUpdate("DELETE FROM DATAFILES");
+        stmt.executeUpdate("DELETE FROM ROLES");
+        stmt.executeUpdate("DELETE FROM TABLESPACES");
     }
 }
