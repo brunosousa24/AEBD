@@ -1,5 +1,10 @@
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -21,7 +26,29 @@ public class fillTABLESPACES implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("TABLESPACES :: filling");
+        System.out.println("TABLESPACES :: START");
+        try {
+            Statement stmt1 = sys.createStatement();
+            Statement stmt2 = work.createStatement();
+            stmt2.executeUpdate("DELETE FROM TABLESPACES");
+            System.out.println("TABLESPACES :: TABLE CLEAN");
+            ResultSet rs1= stmt1.executeQuery("SELECT DBA_TABLESPACES.TABLESPACE_NAME, DBA_TABLESPACE_USAGE_METRICS.TABLESPACE_SIZE, DBA_TABLESPACE_USAGE_METRICS.USED_SPACE "
+                                            + "FROM DBA_TABLESPACES, DBA_TABLESPACE_USAGE_METRICS "
+                                            + "WHERE DBA_TABLESPACES.TABLESPACE_NAME = DBA_TABLESPACE_USAGE_METRICS.TABLESPACE_NAME");
+            System.out.println("TABLESPACES :: FILLING");
+            int i=0;
+            while(rs1.next()) {
+                stmt2.executeUpdate("INSERT INTO TABLESPACES "
+                                   + "VALUES ("+(i++)+", '"+rs1.getString(1)+"', "+rs1.getInt(2)+", "+(rs1.getInt(2)-rs1.getInt(3))+", "+rs1.getInt(3)+", null)");
+            }
+            System.out.println("TABLESPACES :: COMPLETED");
+            sys.close();
+            
+            
+            
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
     
 }

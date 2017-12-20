@@ -29,3 +29,6 @@ GRANT CREATE synonym TO Work;
 GRANT ALTER ANY table TO Work;
 GRANT ALTER ANY procedure TO Work;
 
+
+ALTER USER WORK quota unlimited on WORK_TABLE;
+

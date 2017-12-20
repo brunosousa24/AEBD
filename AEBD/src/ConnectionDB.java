@@ -5,33 +5,37 @@
  */
 import java.sql.DriverManager;
 import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
  * @author Ricardo
  */
-public class ConnectionWork implements Runnable{
+public class ConnectionDB{
+    
+    Connection sys;
     Connection work;
     
-    public Connection getConnection() {
-        return work;
-    }
-
-    @Override
-    public void run() {
-        System.out.println("Starting Connection With WORK");
-        try { 
+    public ConnectionDB () {
+        try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
+            System.out.println("Connections :: START");
+            this.sys = DriverManager.getConnection("jdbc:oracle:thin:sys/sys@localhost:1521/orcl","sys as sysdba","oracle");
+            System.out.println("Connection :: SYS");
             this.work = DriverManager.getConnection("jdbc:oracle:thin:Work/Work@localhost:1521/orcl","Work","work1");
-            System.out.println("Successeful Connection With WORK");
-        } catch (Exception ex) {
-            Logger.getLogger(ConnectionSys.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Connection :: WORK");
+        } catch (Exception e) {
+            System.out.println(e);
         }
+        
     }
     
+    public Connection getSys() {
+        return sys;
+    }
+
+    public Connection getWork() {
+        return work;
+    }
 }
-        
