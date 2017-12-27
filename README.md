@@ -1,12 +1,12 @@
 # AEBD
 
-##Comandos SQL
-    cpu seconds
-    tempo de execução(elapsed time)
-    Module
-    Data
-    Execuções
-    User
+## Comandos SQL
+   * cpu seconds
+   * tempo de execução(elapsed time)
+   * Module
+   * Data
+   * Execuções
+   * User
 
 
 
