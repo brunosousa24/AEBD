@@ -1,108 +1,125 @@
-
-
 CREATE TABLE work.datafiles (
-    status   VARCHAR2(200 BYTE) NOT NULL,
-    sizee    NUMBER NOT NULL,
-    used     NUMBER NOT NULL,
-    tables   VARCHAR2(200 BYTE) NOT NULL,
-    name     VARCHAR2(200 BYTE) NOT NULL
+    id_datafile   NUMBER(*,0) NOT NULL,
+    name          VARCHAR2(200 BYTE),
+    sized         NUMBER(*,0),
+    status        VARCHAR2(200 BYTE),
+    id_table      NUMBER(*,0) NOT NULL,
+    max_bytes     NUMBER
 )
-TABLESPACE work_table LOGGING NO INMEMORY;
+PCTFREE 10 PCTUSED 40 TABLESPACE work_table LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
 
 CREATE UNIQUE INDEX work.datafiles_pk ON
-    work.datafiles ( name ASC )
-        TABLESPACE work_table LOGGING;
+    work.datafiles ( id_datafile ASC )
+        TABLESPACE work_table PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
 
 ALTER TABLE work.datafiles
-    ADD CONSTRAINT datafiles_pk PRIMARY KEY ( name )
+    ADD CONSTRAINT datafiles_pk PRIMARY KEY ( id_datafile )
         USING INDEX work.datafiles_pk;
 
 CREATE TABLE work.roles (
-    role_name     VARCHAR2(200 BYTE) NOT NULL,
-    description   VARCHAR2(200 BYTE) NOT NULL
+    id_role   NUMBER(*,0) NOT NULL,
+    name      VARCHAR2(200 BYTE)
 )
-TABLESPACE work_table LOGGING NO INMEMORY;
+PCTFREE 10 PCTUSED 40 TABLESPACE work_table LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
 
 CREATE UNIQUE INDEX work.roles_pk ON
-    work.roles ( role_name ASC )
-        TABLESPACE work_table LOGGING;
+    work.roles ( id_role ASC )
+        TABLESPACE work_table PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
 
 ALTER TABLE work.roles
-    ADD CONSTRAINT roles_pk PRIMARY KEY ( role_name )
+    ADD CONSTRAINT roles_pk PRIMARY KEY ( id_role )
         USING INDEX work.roles_pk;
 
 CREATE TABLE work.tablespaces (
-    name        VARCHAR2(20 BYTE) NOT NULL,
-    allocated   NUMBER NOT NULL,
-    free        NUMBER NOT NULL,
-    used        NUMBER NOT NULL,
-    max_bytes   NUMBER NOT NULL
+    id_tablespace   NUMBER(*,0) NOT NULL,
+    name            VARCHAR2(200 BYTE),
+    allocated       NUMBER(*,0),
+    free            NUMBER(*,0),
+    used            NUMBER(*,0),
+    contents        VARCHAR2(200 BYTE)
 )
-TABLESPACE work_table LOGGING NO INMEMORY;
+PCTFREE 10 PCTUSED 40 TABLESPACE work_table LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
 
 CREATE UNIQUE INDEX work.tablespaces_pk ON
-    work.tablespaces ( name ASC )
-        TABLESPACE work_table LOGGING;
+    work.tablespaces ( id_tablespace ASC )
+        TABLESPACE work_table PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
 
 ALTER TABLE work.tablespaces
-    ADD CONSTRAINT tablespaces_pk PRIMARY KEY ( name )
+    ADD CONSTRAINT tablespaces_pk PRIMARY KEY ( id_tablespace )
         USING INDEX work.tablespaces_pk;
 
 CREATE TABLE work.users (
-    name           VARCHAR2(200 BYTE) NOT NULL,
-    status         VARCHAR2(200 BYTE) NOT NULL,
-    exp_date       DATE,
-    temp_tablesp   VARCHAR2(200 BYTE) NOT NULL,
-    created        DATE NOT NULL,
-    user_type      VARCHAR2(20 BYTE) NOT NULL,
-    tablespace     VARCHAR2(200 BYTE) NOT NULL
+    id_user           NUMBER(*,0) NOT NULL,
+    name              VARCHAR2(200 BYTE),
+    status            VARCHAR2(200 BYTE),
+    exp_date          DATE,
+    temp_tablespace   VARCHAR2(200 BYTE),
+    created           DATE,
+    id_tablespace     NUMBER(*,0) NOT NULL
 )
-TABLESPACE work_table LOGGING NO INMEMORY;
+PCTFREE 10 PCTUSED 40 TABLESPACE work_table LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
 
 CREATE UNIQUE INDEX work.users_pk ON
-    work.users ( name ASC )
-        TABLESPACE work_table LOGGING;
+    work.users ( id_user ASC )
+        TABLESPACE work_table PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
 
 ALTER TABLE work.users
-    ADD CONSTRAINT users_pk PRIMARY KEY ( name )
+    ADD CONSTRAINT users_pk PRIMARY KEY ( id_user )
         USING INDEX work.users_pk;
 
 CREATE TABLE work.users_roles (
-    usern   VARCHAR2(200 BYTE) NOT NULL,
-    role    VARCHAR2(200 BYTE) NOT NULL
+    id_ur      NUMBER(*,0) NOT NULL,
+    id_user    NUMBER(*,0) NOT NULL,
+    id_roles   NUMBER(*,0) NOT NULL
 )
-TABLESPACE work_table LOGGING NO INMEMORY;
+PCTFREE 10 PCTUSED 40 TABLESPACE work_table LOGGING
+    STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+NO INMEMORY;
 
 CREATE UNIQUE INDEX work.users_roles_pk ON
-    work.users_roles (
-        usern
-    ASC,
-        role
-    ASC )
-        TABLESPACE work_table LOGGING;
+    work.users_roles ( id_ur ASC )
+        TABLESPACE work_table PCTFREE 10
+            STORAGE ( PCTINCREASE 0 MINEXTENTS 1 MAXEXTENTS UNLIMITED FREELISTS 1 FREELIST GROUPS 1 BUFFER_POOL DEFAULT )
+        LOGGING;
 
 ALTER TABLE work.users_roles
-    ADD CONSTRAINT users_roles_pk PRIMARY KEY ( usern,
-    role )
+    ADD CONSTRAINT users_roles_pk PRIMARY KEY ( id_ur )
         USING INDEX work.users_roles_pk;
 
 ALTER TABLE work.datafiles
-    ADD CONSTRAINT datafiles_fk1 FOREIGN KEY ( tables )
-        REFERENCES work.tablespaces ( name )
+    ADD CONSTRAINT datafiles_fk1 FOREIGN KEY ( id_table )
+        REFERENCES work.tablespaces ( id_tablespace )
     NOT DEFERRABLE;
 
 ALTER TABLE work.users
-    ADD CONSTRAINT users_fk1 FOREIGN KEY ( tablespace )
-        REFERENCES work.tablespaces ( name )
+    ADD CONSTRAINT users_fk1 FOREIGN KEY ( id_tablespace )
+        REFERENCES work.tablespaces ( id_tablespace )
     NOT DEFERRABLE;
 
 ALTER TABLE work.users_roles
-    ADD CONSTRAINT users_roles_fk1 FOREIGN KEY ( usern )
-        REFERENCES work.users ( name )
+    ADD CONSTRAINT users_roles_fk1 FOREIGN KEY ( id_roles )
+        REFERENCES work.roles ( id_role )
     NOT DEFERRABLE;
 
 ALTER TABLE work.users_roles
-    ADD CONSTRAINT users_roles_fk2 FOREIGN KEY ( role )
-        REFERENCES work.roles ( role_name )
+    ADD CONSTRAINT users_roles_fk2 FOREIGN KEY ( id_user )
+        REFERENCES work.users ( id_user )
     NOT DEFERRABLE;
+
 
