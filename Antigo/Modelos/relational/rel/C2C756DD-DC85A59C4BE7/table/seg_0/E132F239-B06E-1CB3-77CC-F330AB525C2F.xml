@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E132F239-B06E-1CB3-77CC-F330AB525C2F" schemaObject="B707C4A2-3F5E-AE48-7BDB-20B3AC93FB5B" name="HOSPITAL">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>HOSPITAL</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>B37DC0E7-C06E-6441-F14C-6DF8533D9FEE</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_HOSPITAL" id="AACC03C4-1979-A875-B552-8B6DF20D18C2">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL</sourceObjSchema>
+<sourceObjName>ID_HOSPITAL</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>EE6D145C-6F18-0D14-BAD1-64B725DBE176</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOME" id="C5452E4A-9289-746C-90DA-D3840A37E1B3">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL</sourceObjSchema>
+<sourceObjName>NOME</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>14228D9B-48FC-871C-3E3C-9DD125DCFB03</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CIDADE" id="77B38E4C-C2F2-4F9E-9DB1-AD882C45AA81">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL</sourceObjSchema>
+<sourceObjName>CIDADE</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>76E591CB-C6F7-5DB0-F5E3-D11F44DA40EE</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO" id="CA9DAE6C-3A26-B844-656B-6144BFEE11B9">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL</sourceObjSchema>
+<sourceObjName>TIPO</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>F0672960-6C31-93B7-805F-0B3704E0CB68</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTACTO" id="3835F913-0B19-79E5-57BA-5FC875E0279F">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>HOSPITAL</sourceObjSchema>
+<sourceObjName>CONTACTO</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>5BFC38D8-9ED0-4180-52D5-7CD53B9E8C2B</importedID>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>9</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,9,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4BC752A-3AB7-ACF4-2867-A411A95D9BE2" name="HOSPITAL_PK">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>HOSPITAL_PK</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>0B7E60E2-8C5C-9B9E-3DE4-8514BCFEAF35</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AACC03C4-1979-A875-B552-8B6DF20D18C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F9E6B0C5-1D86-899D-6C5B-F37F67D8F66D" schemaObject="B707C4A2-3F5E-AE48-7BDB-20B3AC93FB5B" name="HOSPITAL_PK">
+<sourceConnName>work</sourceConnName>
+<sourceObjSchema>USER1</sourceObjSchema>
+<sourceObjName>HOSPITAL_PK</sourceObjName>
+<createdBy>adriana</createdBy>
+<createdTime>2017-11-23 14:49:06 UTC</createdTime>
+<ownerDesignName>relational</ownerDesignName>
+<importedID>F50E0DC3-CC6D-EA90-40E3-A3BD6E1F0A6C</importedID>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AACC03C4-1979-A875-B552-8B6DF20D18C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
