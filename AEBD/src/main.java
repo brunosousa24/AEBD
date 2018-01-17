@@ -34,11 +34,11 @@ public class main {
         Thread t6 = new Thread(new fillCPU(sys,work));
         t6.start();
         Thread t7 = new Thread(new fillSQLCOMMANDS(sys,work));
-        t7.start();/*
+        t7.start();
         Thread t8 = new Thread(new fillMEMORYSTORAGE(sys,work));
         t8.start();
         Thread t9 = new Thread(new fillSESSION(sys,work));
-        t9.start();*/
+        t9.start();
         
         
         //Fills Tablespaces
@@ -64,9 +64,9 @@ public class main {
         
         //waits until user_roles and datafiles are filled | END
         t6.join();
-        t7.join();/*
+        t7.join();
         t8.join();
-        t9.join();*/
+        t9.join();
         t4.join();
         t5.join();
         

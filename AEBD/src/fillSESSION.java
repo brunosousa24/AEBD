@@ -26,12 +26,13 @@ public class fillSESSION implements Runnable {
         System.out.println("SESSIONS :: START");
         try {Statement stmt1 = sys.createStatement();
             Statement stmt2 = work.createStatement();
-            ResultSet rs1= stmt1.executeQuery("SELECT  "
-                                            + "FROM ");
+            ResultSet rs1= stmt1.executeQuery("SELECT V.SESSION_ID, V.SAMPLE_TIME_UTC, V.SQL_PLAN_OPERATION, V.SESSION_TYPE, V.SESSION_STATE, V.USER_ID, V.SQL_ID, V.WAIT_TIME, V.TIME_WAITED "
+                                            + "FROM V_$ACTIVE_SESSION_HISTORY V");
             System.out.println("SESSIONS :: FILLING");
+            int i=0;
             while(rs1.next()) {
                 stmt2.executeUpdate("INSERT INTO SESSIONS "
-                                   + "VALUES ("+rs1.getInt(1)+", '"+rs1.getString(2)+"')");
+                                   + "VALUES ("+(i++)+", "+rs1.getInt(1)+", "+(rs1.getDate(2)!=null ? ("'"+rs1.getDate(2)+"'") : null)+", '"+rs1.getString(3)+"', '"+rs1.getString(4)+"', '"+rs1.getString(5)+"', "+rs1.getInt(6)+", '"+rs1.getString(7)+"', "+rs1.getInt(8)+", "+rs1.getInt(9)+")");
             }
             System.out.println("SESSIONS :: COMPLETED");
         }catch(Exception e){
