@@ -30,14 +30,14 @@ public class fillTABLESPACES implements Runnable {
         try {
             Statement stmt1 = sys.createStatement();
             Statement stmt2 = work.createStatement();
-            ResultSet rs1= stmt1.executeQuery("SELECT DBA_TABLESPACES.TABLESPACE_NAME, DBA_TABLESPACE_USAGE_METRICS.TABLESPACE_SIZE, DBA_TABLESPACE_USAGE_METRICS.USED_SPACE "
+            ResultSet rs1= stmt1.executeQuery("SELECT DBA_TABLESPACES.TABLESPACE_NAME, DBA_TABLESPACE_USAGE_METRICS.TABLESPACE_SIZE, DBA_TABLESPACE_USAGE_METRICS.USED_SPACE, DBA_TABLESPACES.CONTENTS "
                                             + "FROM DBA_TABLESPACES, DBA_TABLESPACE_USAGE_METRICS "
                                             + "WHERE DBA_TABLESPACES.TABLESPACE_NAME = DBA_TABLESPACE_USAGE_METRICS.TABLESPACE_NAME");
             System.out.println("TABLESPACES :: FILLING");
             int i=0;
             while(rs1.next()) {
                 stmt2.executeUpdate("INSERT INTO TABLESPACES "
-                                   + "VALUES ("+(i++)+", '"+rs1.getString(1)+"', "+rs1.getInt(2)+", "+(rs1.getInt(2)-rs1.getInt(3))+", "+rs1.getInt(3)+", null)");
+                                   + "VALUES ("+(i++)+", '"+rs1.getString(1)+"', "+rs1.getInt(2)+", "+(rs1.getInt(2)-rs1.getInt(3))+", "+rs1.getInt(3)+", '"+rs1.getString(4)+"')");
             }
             System.out.println("TABLESPACES :: COMPLETED");
         }catch(Exception e){
