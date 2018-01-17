@@ -1,0 +1,14 @@
+/app/tablespace
+/app/datafiles
+/app/users
+/app/roles
+/app/cpu
+/app/users_roles
+/app/cpu
+/app/memory_stage
+/app/sql_commands
+/app/sessions
+
+
+
+Desempenho
