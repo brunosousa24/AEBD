@@ -1,9 +1,9 @@
 /*
 Iniciar servidor que trata de pedidos
 */
-const express = require('express');
+var express = require('express');
 var app = express();
-var db = require('oracledb')
+var db = require('oracledb');
 
 app.set('view engine', 'pug');
 
