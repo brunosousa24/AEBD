@@ -36,7 +36,7 @@ public class fillUSERS implements Runnable {
                                                  + "WHERE TABLESPACES.NAME = '"+rs1.getString(7)+"'");
                 while(rs2.next())
                     stmt3.executeUpdate("INSERT INTO USERS "
-                                      + "VALUES ("+rs1.getInt(1)+", '"+rs1.getString(2)+"', '"+rs1.getString(3)+"', "+(rs1.getDate(4)!=null ? ("'"+rs1.getDate(4)+"'") : null)+", '"+rs1.getString(5)+"', "+(rs1.getDate(6)!=null ? ("'"+rs1.getDate(6)+"'") : null)+", null, "+rs2.getInt(1)+")");
+                                      + "VALUES ("+rs1.getInt(1)+", '"+rs1.getString(2)+"', '"+rs1.getString(3)+"', "+(rs1.getDate(4)!=null ? ("'"+rs1.getDate(4)+"'") : null)+", '"+rs1.getString(5)+"', "+(rs1.getDate(6)!=null ? ("'"+rs1.getDate(6)+"'") : null)+", "+rs2.getInt(1)+")");
             }
             System.out.println("USERS :: COMPLETED");
         }catch(Exception e){
