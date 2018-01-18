@@ -1,0 +1,480 @@
+{
+  "items": [
+    {
+      "idcpu": 0,
+      "dbid": 776972821,
+      "sql_id": "gngtvs38t0060",
+      "executions_delta": 5,
+      "buffer_gets_delta": 222,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 6734,
+      "elapsed_time_delta": 7692,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/0"
+        }
+      ]
+    },
+    {
+      "idcpu": 1,
+      "dbid": 776972821,
+      "sql_id": "8swypbbr0m372",
+      "executions_delta": 1120,
+      "buffer_gets_delta": 29434,
+      "disk_reads_delta": 136,
+      "iowait_delta": 16272407,
+      "apwait_delta": 0,
+      "cpu_time_delta": 761970,
+      "elapsed_time_delta": 21375252,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/1"
+        }
+      ]
+    },
+    {
+      "idcpu": 2,
+      "dbid": 776972821,
+      "sql_id": "g0r5psznj761u",
+      "executions_delta": 110,
+      "buffer_gets_delta": 7738,
+      "disk_reads_delta": 35,
+      "iowait_delta": 1845847,
+      "apwait_delta": 0,
+      "cpu_time_delta": 233088,
+      "elapsed_time_delta": 2653852,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/2"
+        }
+      ]
+    },
+    {
+      "idcpu": 3,
+      "dbid": 776972821,
+      "sql_id": "50vxqdkj4zu1w",
+      "executions_delta": 1037,
+      "buffer_gets_delta": 3327,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 374892,
+      "elapsed_time_delta": 1450981,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/3"
+        }
+      ]
+    },
+    {
+      "idcpu": 4,
+      "dbid": 776972821,
+      "sql_id": "2cngw9d1r43cd",
+      "executions_delta": 3,
+      "buffer_gets_delta": 304,
+      "disk_reads_delta": 1,
+      "iowait_delta": 8839,
+      "apwait_delta": 0,
+      "cpu_time_delta": 9600,
+      "elapsed_time_delta": 17994,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/4"
+        }
+      ]
+    },
+    {
+      "idcpu": 5,
+      "dbid": 776972821,
+      "sql_id": "g2s1gpvyan3cj",
+      "executions_delta": 3,
+      "buffer_gets_delta": 319,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 10878,
+      "elapsed_time_delta": 11104,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/5"
+        }
+      ]
+    },
+    {
+      "idcpu": 6,
+      "dbid": 776972821,
+      "sql_id": "ar9nmtmd28460",
+      "executions_delta": 18,
+      "buffer_gets_delta": 0,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 2816,
+      "elapsed_time_delta": 3122,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/6"
+        }
+      ]
+    },
+    {
+      "idcpu": 7,
+      "dbid": 776972821,
+      "sql_id": "3zqk646c0847g",
+      "executions_delta": 6,
+      "buffer_gets_delta": 184,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 5904,
+      "elapsed_time_delta": 6010,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/7"
+        }
+      ]
+    },
+    {
+      "idcpu": 8,
+      "dbid": 776972821,
+      "sql_id": "8vnjxtfyy84as",
+      "executions_delta": 7,
+      "buffer_gets_delta": 3280,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 85016,
+      "elapsed_time_delta": 89726,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/8"
+        }
+      ]
+    },
+    {
+      "idcpu": 9,
+      "dbid": 776972821,
+      "sql_id": "d3awq1p0f84rc",
+      "executions_delta": 3,
+      "buffer_gets_delta": 425,
+      "disk_reads_delta": 2,
+      "iowait_delta": 94447,
+      "apwait_delta": 0,
+      "cpu_time_delta": 10162,
+      "elapsed_time_delta": 104015,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/9"
+        }
+      ]
+    },
+    {
+      "idcpu": 10,
+      "dbid": 776972821,
+      "sql_id": "3k0c6241uw582",
+      "executions_delta": 55,
+      "buffer_gets_delta": 168,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 1007,
+      "elapsed_time_delta": 2273,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/10"
+        }
+      ]
+    },
+    {
+      "idcpu": 11,
+      "dbid": 776972821,
+      "sql_id": "3tdf1gw7qs5su",
+      "executions_delta": 3,
+      "buffer_gets_delta": 165,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 7890,
+      "elapsed_time_delta": 8400,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/11"
+        }
+      ]
+    },
+    {
+      "idcpu": 12,
+      "dbid": 776972821,
+      "sql_id": "asvzxj61dc5vs",
+      "executions_delta": 1,
+      "buffer_gets_delta": 15,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 1913,
+      "elapsed_time_delta": 2151,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/12"
+        }
+      ]
+    },
+    {
+      "idcpu": 13,
+      "dbid": 776972821,
+      "sql_id": "5n0t3uxw307bd",
+      "executions_delta": 3,
+      "buffer_gets_delta": 36,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 4994,
+      "elapsed_time_delta": 5184,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/13"
+        }
+      ]
+    },
+    {
+      "idcpu": 14,
+      "dbid": 776972821,
+      "sql_id": "7z7n648sgr6h4",
+      "executions_delta": 82,
+      "buffer_gets_delta": 657,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 21777,
+      "elapsed_time_delta": 27090,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/14"
+        }
+      ]
+    },
+    {
+      "idcpu": 15,
+      "dbid": 776972821,
+      "sql_id": "9tgj4g8y4rwy8",
+      "executions_delta": 2955,
+      "buffer_gets_delta": 20009,
+      "disk_reads_delta": 17,
+      "iowait_delta": 2245071,
+      "apwait_delta": 0,
+      "cpu_time_delta": 487068,
+      "elapsed_time_delta": 4545117,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/15"
+        }
+      ]
+    },
+    {
+      "idcpu": 16,
+      "dbid": 776972821,
+      "sql_id": "acmvv4fhdc9zh",
+      "executions_delta": 11202,
+      "buffer_gets_delta": 58056,
+      "disk_reads_delta": 150,
+      "iowait_delta": 16055509,
+      "apwait_delta": 0,
+      "cpu_time_delta": 906058,
+      "elapsed_time_delta": 20300148,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/16"
+        }
+      ]
+    },
+    {
+      "idcpu": 17,
+      "dbid": 776972821,
+      "sql_id": "57guu81bd4bc5",
+      "executions_delta": 1362,
+      "buffer_gets_delta": 24888,
+      "disk_reads_delta": 1,
+      "iowait_delta": 15,
+      "apwait_delta": 0,
+      "cpu_time_delta": 752248,
+      "elapsed_time_delta": 3137563,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/17"
+        }
+      ]
+    },
+    {
+      "idcpu": 18,
+      "dbid": 776972821,
+      "sql_id": "6qz82dptj0qr7",
+      "executions_delta": 414,
+      "buffer_gets_delta": 23107,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 578833,
+      "elapsed_time_delta": 3872070,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/18"
+        }
+      ]
+    },
+    {
+      "idcpu": 19,
+      "dbid": 776972821,
+      "sql_id": "b3h1d9uqnvcgx",
+      "executions_delta": 1,
+      "buffer_gets_delta": 49,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 9700,
+      "elapsed_time_delta": 10130,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/19"
+        }
+      ]
+    },
+    {
+      "idcpu": 20,
+      "dbid": 776972821,
+      "sql_id": "0fr8zhn4ymu3v",
+      "executions_delta": 739,
+      "buffer_gets_delta": 24047,
+      "disk_reads_delta": 1,
+      "iowait_delta": 179457,
+      "apwait_delta": 0,
+      "cpu_time_delta": 673427,
+      "elapsed_time_delta": 4140454,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/20"
+        }
+      ]
+    },
+    {
+      "idcpu": 21,
+      "dbid": 776972821,
+      "sql_id": "5wxyshspv54v4",
+      "executions_delta": 55,
+      "buffer_gets_delta": 1304,
+      "disk_reads_delta": 0,
+      "iowait_delta": 0,
+      "apwait_delta": 0,
+      "cpu_time_delta": 28352,
+      "elapsed_time_delta": 32680,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/21"
+        }
+      ]
+    },
+    {
+      "idcpu": 22,
+      "dbid": 776972821,
+      "sql_id": "3un99a0zwp4vd",
+      "executions_delta": 1120,
+      "buffer_gets_delta": 37859,
+      "disk_reads_delta": 274,
+      "iowait_delta": 29939507,
+      "apwait_delta": 0,
+      "cpu_time_delta": 940435,
+      "elapsed_time_delta": 35181435,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/22"
+        }
+      ]
+    },
+    {
+      "idcpu": 23,
+      "dbid": 776972821,
+      "sql_id": "0sbbcuruzd66f",
+      "executions_delta": 63428,
+      "buffer_gets_delta": 189157,
+      "disk_reads_delta": 200,
+      "iowait_delta": 19117050,
+      "apwait_delta": 0,
+      "cpu_time_delta": 1423348,
+      "elapsed_time_delta": 23879776,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/23"
+        }
+      ]
+    },
+    {
+      "idcpu": 24,
+      "dbid": 776972821,
+      "sql_id": "121ffmrc95v7g",
+      "executions_delta": 3805,
+      "buffer_gets_delta": 72694,
+      "disk_reads_delta": 51,
+      "iowait_delta": 7253972,
+      "apwait_delta": 0,
+      "cpu_time_delta": 3075654,
+      "elapsed_time_delta": 25360032,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/cpu/24"
+        }
+      ]
+    }
+  ],
+  "hasMore": true,
+  "limit": 25,
+  "offset": 0,
+  "count": 25,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/cpu/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/cpu/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/cpu/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/cpu/"
+    },
+    {
+      "rel": "next",
+      "href": "http://localhost:5555/ords/work/cpu/?offset=25"
+    }
+  ]
+}

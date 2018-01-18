@@ -1,0 +1,70 @@
+{
+  "items": [
+    {
+      "id_memstorage": 0,
+      "name": "Fixed Size",
+      "value": 8798312,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/memory_storage/0"
+        }
+      ]
+    },
+    {
+      "id_memstorage": 1,
+      "name": "Variable Size",
+      "value": 352325528,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/memory_storage/1"
+        }
+      ]
+    },
+    {
+      "id_memstorage": 2,
+      "name": "Database Buffers",
+      "value": 473956352,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/memory_storage/2"
+        }
+      ]
+    },
+    {
+      "id_memstorage": 3,
+      "name": "Redo Buffers",
+      "value": 3780608,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/memory_storage/3"
+        }
+      ]
+    }
+  ],
+  "hasMore": false,
+  "limit": 25,
+  "offset": 0,
+  "count": 4,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/memory_storage/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/memory_storage/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/memory_storage/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/memory_storage/"
+    }
+  ]
+}

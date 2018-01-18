@@ -1,0 +1,330 @@
+{
+  "items": [
+    {
+      "idcommands": 82,
+      "dbid": 776972821,
+      "sql_id": "5d0jm3tp3v42u",
+      "sql_text": " create table \"SH\".CMP3$79970 tablespace \"AEBD_TABLES\" nologging  as select /*+ DYNAMIC_SAMPLING(0) FULL(\"SH\".\"CUSTOMERS\") */ *  from \"SH\".\"CUSTOMERS\"  sample block( 39.06) mytab ",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/82"
+        }
+      ]
+    },
+    {
+      "idcommands": 83,
+      "dbid": 776972821,
+      "sql_id": "4q607gwyr580r",
+      "sql_text": "MERGE /*+ dynamic_sampling(4) dynamic_sampling_est_cdn  */ INTO SYS.MON_MODS_ALL$ MM USING ( SELECT OBJ#, SUM(FLGS) FLGS FROM ( SELECT OBJ#, :B1 FLGS FROM ( SELECT DISTINCT TAB.OBJ# FROM (SELECT T.OBJ# OBJ#, T.OBJ# BO#, T.ANALYZETIME FROM SYS.TAB$ T WHERE BITAND(T.FLAGS,16) = 16 UNION ALL SELECT T.OBJ# OBJ#, T.BO# BO#, T.ANALYZETIME FROM SYS.TABPART$ T WHERE BITAND(T.FLAGS,2) = 2 UNION ALL SELECT T.OBJ# OBJ#, T.BO# BO#, T.ANALYZETIME FROM SYS.TABCOMPART$ T WHERE BITAND(T.FLAGS,2) = 2 UNION ALL SELECT T.OBJ# OBJ#, TCP.BO# BO#, T.ANALYZETIME FROM SYS.TABSUBPART$ T, SYS.TABCOMPART$ TCP WHERE BITAND(T.FLAGS,2) = 2 AND T.POBJ# = TCP.OBJ# ) TAB, OBJ$ O, SYS.COL$ C WHERE TAB.BO# = O.OBJ# AND TAB.ANALYZETIME < O.MTIME AND C.OBJ# = TAB.BO# AND C.TYPE# IN ( 1, 2, 12, 23, 69, 96, 100, 101, 178, 179, 180, 181, 182, 183, 231) AND BITAND(C.PROPERTY, 16384+32768) = 0 AND NOT (BITAND(C.PROPERTY, 32+65536+131072) = 32+65536 AND C.DEFAULT$ IS NULL ) AND NOT EXISTS (SELECT NULL FROM HIST_HEAD$ HH WHERE HH.OBJ# = TAB.OBJ# AND HH.INTCOL# = C.INTCOL#)) UNION ALL SELECT DISTINCT TAB.OBJ# OBJ#, :B3 FLGS FROM (SELECT T.OBJ# OBJ#, T.OBJ# BO#, T.ANALYZETIME, T.ROWCNT FROM SYS.TAB$ T WHERE BITAND(T.FLAGS,16) = 16 UNION ALL SELECT T.OBJ# OBJ#, T.BO# BO#, T.ANALYZETIME, T.ROWCNT FROM SYS.TABPART$ T WHERE BITAND(T.FLAGS,2) = 2 UNION ALL SELECT T.OBJ# OBJ#, T.BO# BO#, T.ANALYZETIME, T.ROWCNT FROM SYS.TABCOMPART$ T WHERE BITAND(T.FLAGS,2) = 2 UNION ALL SELECT T.OBJ# OBJ#, TCP.BO# BO#, T.ANALYZETIME, T.ROWCNT FROM SYS.TABSUBPART$ T, SYS.TABCOMPART$ TCP WHERE BITAND(T.FLAGS,2) = 2 AND T.POBJ# = TCP.OBJ# ) TAB, OBJ$ O, USER$ U, SYS.COL$ C, OPTSTAT_USER_PREFS$ P1 WHERE TAB.BO# = O.OBJ# AND C.OBJ# = TAB.BO# AND O.OWNER# = U.USER# AND TAB.OBJ# = P1.OBJ#(+) AND P1.PNAME(+) = 'METHOD_OPT' AND C.TYPE# IN ( 1, 2, 12, 23, 69, 96, 100, 101, 178, 179, 180, 181, 182, 183, 231) AND BITAND(C.PROPERTY, 16384+32768) = 0 AND NOT (BITAND(C.PROPERTY, 32+65536+131072) = 32+65536 AND C.DEFAULT$ IS NULL ) AND DBMS_STATS.COLUMN_NEED_HIST(U.NAME, O.NAME, C.NAME, NVL(P1.VALCHAR, :B2 )) = 1 AND EXISTS (SELECT NULL FROM SYS.HIST_HEAD$ HH, SYS.COL_USAGE$ CU WHERE CU.OBJ# = TAB.BO# AND HH.OBJ# = TAB.OBJ# AND HH.INTCOL# = CU.INTCOL# AND BITAND(HH.SPARE2, 16) = 0 AND NOT (NVL(HH.ROW_CNT, 0) > 0 OR HH.NULL_CNT = TAB.ROWCNT) AND (CASE WHEN TAB.ANALYZETIME < CU.TIMESTAMP THEN (EQUALITY_PREDS + EQUIJOIN_PREDS + RANGE_PREDS + LIKE_PREDS + NONEQUIJOIN_PREDS) ELSE 0 END) > 0) UNION ALL SELECT CGU.OBJ# OBJ#, :B7 FLGS FROM SYS.COL_GROUP_USAGE$ CGU, OPTSTAT_USER_PREFS$ P1 WHERE BITAND(CGU.FLAGS, :B6 + :B5 ) = 0 AND CGU.OBJ# = P1.OBJ#(+) AND P1.PNAME(+)='AUTO_STAT_EXTENSIONS' AND NVL(P1.VALCHAR, :B4 ) = 'ON' ) GROUP BY OBJ# ) MCS ON (MM.OBJ# = MCS.OBJ#) WHEN MATCHED THEN UPDATE SET FLAGS = FLAGS + MCS.FLGS - BITAND(FLAGS, MCS.FLGS) WHEN NOT MATCHED THEN INSERT (OBJ#, INSERTS, UPDATES, DELETES, TIMESTAMP, FLAGS, DROP_SEGMENTS) VALUES(MCS.OBJ#, 0, 0, 0, :B8 , MCS.FLGS, 0)",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/83"
+        }
+      ]
+    },
+    {
+      "idcommands": 84,
+      "dbid": 776972821,
+      "sql_id": "89z0803j321v4",
+      "sql_text": "SELECT COUNT(*) FROM SYS.ALL_TAB_PARTITIONS WHERE TABLE_OWNER = :B2 AND TABLE_NAME = :B1 ",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/84"
+        }
+      ]
+    },
+    {
+      "idcommands": 85,
+      "dbid": 776972821,
+      "sql_id": "90h37x992hg9g",
+      "sql_text": "SELECT OBJECT_ID FROM SYS.ALL_OBJECTS WHERE OWNER = :B2 AND OBJECT_NAME = :B1 AND OBJECT_TYPE = 'TABLE' AND SUBOBJECT_NAME IS NULL",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/85"
+        }
+      ]
+    },
+    {
+      "idcommands": 86,
+      "dbid": 776972821,
+      "sql_id": "6vskb80s2fhjt",
+      "sql_text": "SELECT COLUMN_NAME FROM SYS.ALL_TAB_COLUMNS WHERE OWNER = :B2 AND TABLE_NAME = :B1 AND DATA_TYPE IN ('CLOB','BLOB','BFILE')",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/86"
+        }
+      ]
+    },
+    {
+      "idcommands": 87,
+      "dbid": 776972821,
+      "sql_id": "b6usrg82hwsa3",
+      "sql_text": "call dbms_stats.gather_database_stats_job_proc (  )",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/87"
+        }
+      ]
+    },
+    {
+      "idcommands": 88,
+      "dbid": 776972821,
+      "sql_id": "0nbx3yq39brq9",
+      "sql_text": "SELECT COUNT(*) FROM SYS.ALL_TAB_COLS WHERE OWNER = :B2 AND TABLE_NAME = :B1 AND (DATA_TYPE = 'LONG' OR DATA_TYPE = 'LONG RAW')",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/88"
+        }
+      ]
+    },
+    {
+      "idcommands": 89,
+      "dbid": 776972821,
+      "sql_id": "01xv155rhts3j",
+      "sql_text": "SELECT COUNT(*) FROM SYS_UNCOMPRESSED_SEGS WHERE TOTAL_INDEXES >= 3 AND SEGSIZE > 10485760",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/89"
+        }
+      ]
+    },
+    {
+      "idcommands": 90,
+      "dbid": 776972821,
+      "sql_id": "cw81rkd4cw3d6",
+      "sql_text": "SELECT pl.signature,                                                                 pl.category,                                                                  pl.name,                                                                      pl.plan_id,                                                                   DECODE(BITAND(pl.flags, :1), 0, :2, :3) flags,                                pl.sql_handle,                                                                pl.sql_text,                                                                  pl.comp_data,                                                                 pl.optimizer_env,                                                             pl.bind_data,                                                                 pl.parsing_schema_name,                                                       pl.creator,                                                                   (CASE                                                                            /* plan is already accepted */                                                WHEN (BITAND(pl.flags, :4) <> 0)                                                THEN :5                                                                     /* plan has recently been verified */                                         WHEN (pl.is_auto IS NOT NULL AND                                                    pl.last_verified > SYSTIMESTAMP - :6)                                     THEN :7                                                                     /* plan's SQL statement hasn't been recently executed */                      WHEN (pl.is_auto IS NOT NULL AND                                                    pl.last_verified IS NOT NULL AND                                              pl.sql_last_executed < SYSTIMESTAMP - :8)                                 THEN :9                                                                     ELSE :10                                                                    END) pruned                                                           FROM (SELECT so.signature,                                                                 so.category,                                                                  so.name,                                                                      so.plan_id,                                                                   so.flags,                                                                     st.sql_handle,                                                                st.sql_text,                                                                  (DECODE(BITAND(so.flags, 128), 128,                                                   (SELECT EXTRACTCLOBXML(pl.other_xml,                                                                 '/*/outline_data')                                      FROM   sys.sqlobj$plan pl                                                     WHERE  pl.signature = so.signature                                                   AND pl.category = so.category                                                 AND pl.obj_type = so.obj_type                                                 AND pl.plan_id = so.plan_id                                                   AND pl.other_xml IS NOT NULL),                                       (SELECT sod.comp_data                                                          FROM   sys.sqlobj$data sod                                                    WHERE sod.signature = so.signature                                                  AND sod.category = so.category                                                AND sod.obj_type = so.obj_type                                                AND sod.plan_id = so.plan_id)))                                   comp_data,                                                                  sox.optimizer_env,                                                            sox.bind_data,                                                                sox.parsing_schema_name,                                                      sox.creator,                                                                  sox.last_verified,                                                            sox.optimizer_cost,                                                           sox.created,                                                                  :11 is_auto,                                                                  (SELECT MAX(last_executed)                                                     FROM sys.sqlobj$ ob                                                           WHERE ob.signature = so.signature                                                   AND ob.obj_type = so.obj_type                                                 AND ob.category = so.category)                                           sql_last_executed                                                    FROM   sys.sqlobj$ so,                                                               sys.sqlobj$auxdata sox,                                                       sys.sql$text st                                                        WHERE (:12 IS NULL                                                                   OR so.name                                                                         IN (SELECT EXTRACTVALUE(VALUE(p), '/plan') pname                                  FROM TABLE(XMLSEQUENCE(                                                                    EXTRACT(XMLTYPE(:13),                                                                 '/plan_list/*'))) p))                          AND (:14 IS NOT NULL                                                               OR (BITAND(so.flags, :15) <> 0                                                    AND BITAND(so.flags, :16) = 0))                                      AND so.obj_type = :17                                                         AND so.signature = sox.signature                                              AND so.category = sox.category                                                AND so.obj_type = sox.obj_type                                                AND so.plan_id = sox.plan_id                                                  AND so.signature = st.signature                                               AND (:18 IS NULL OR st.sql_handle = :19)) pl                      ORDER BY DECODE(:20, 0, NULL, pl.name),                                                pl.last_verified NULLS FIRST,                                                 pl.sql_last_executed DESC NULLS LAST,                                         pl.optimizer_cost,                                                            pl.created,                                                                   pl.name",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/90"
+        }
+      ]
+    },
+    {
+      "idcommands": 91,
+      "dbid": 776972821,
+      "sql_id": "4gygy27kugd7z",
+      "sql_text": "SELECT sql_id, plan_hash_value, src, data_1, data_2 FROM (\n       SELECT * FROM ((SELECT SUM(elapsed_time)   elapsed_time,\n            SUM(cpu_time)       cpu_time,\n            SUM(disk_reads)     disk_reads,\n            SUM(buffer_gets)    buffer_gets,\n            SUM(direct_writes)  direct_writes,\n            SUM(executions)     executions,\n            null data_1, null data_2, -- unused, needed for STS\n            sql_id, plan_hash_value,\n            'AWR' src\n     FROM (\n       SELECT /*+ leading(st) */\n              fetches_delta        fetches,\n              executions_delta     executions,\n              disk_reads_delta     disk_reads,\n              direct_writes_delta  direct_writes,\n              buffer_gets_delta    buffer_gets,\n              rows_processed_delta rows_processed,\n              cpu_time_delta       cpu_time,\n              elapsed_time_delta   elapsed_time,\n              s.sql_id, \n              plan_hash_value\n       FROM sys.cdb_hist_sqlstat s,\n            sys.cdb_hist_snapshot sn,\n            sys.cdb_hist_sqltext st\n       WHERE sn.end_interval_time >\n               (SELECT systimestamp AT TIME ZONE dbtimezone\n                FROM dual) - 7 AND\n             s.snap_id = sn.snap_id AND\n             s.dbid = :dbid AND\n             s.dbid = st.dbid AND\n             s.con_dbid = st.con_dbid AND\n             s.sql_id = st.sql_id AND\n             (:sig = dbms_sqltune_util0.sqltext_to_signature(sql_text) OR\n              (:sig IS NULL AND\n               ((:existingSQL IS NOT NULL AND :newSQL IS NOT NULL) OR\n                (:existingSQL IS NOT NULL AND\n                 :newSQL IS NULL AND\n                 dbms_sqltune_util0.sqltext_to_signature(sql_text) \n                   IN (SELECT signature\n                       FROM sys.sqlobj$\n                       WHERE obj_type = 2)) OR\n                (:existingSQL IS NULL AND\n                 :newSQL IS NOT NULL AND\n                 dbms_sqltune_util0.sqltext_to_signature(sql_text) \n                   NOT IN (SELECT signature\n                           FROM sys.sqlobj$\n                           WHERE obj_type = 2))))))\n     GROUP BY sql_id, plan_hash_value) UNION ALL (SELECT elapsed_time/executions elapsed_time,\n            cpu_time/executions cpu_time,\n            buffer_gets/executions buffer_gets,\n            disk_reads/executions disk_reads,\n            direct_writes/executions direct_writes,\n            executions,\n            null data_1, null data_2, -- unused, needed for STS\n            sql_id, plan_hash_value,\n            'CC' src\n     FROM sys.v$sqlarea_plan_hash\n     WHERE con_dbid = :dbid AND\n           executions > 0 AND\n           (:sig = dbms_sqltune_util0.sqltext_to_signature(sql_text) OR\n            (:sig IS NULL AND\n             ((:existingSQL IS NOT NULL AND :newSQL IS NOT NULL) OR\n              (:existingSQL IS NOT NULL AND\n               :newSQL IS NULL AND\n               dbms_sqltune_util0.sqltext_to_signature(sql_text) \n                 IN (SELECT signature\n                     FROM sys.sqlobj$\n                     WHERE obj_type = 2)) OR\n              (:existingSQL IS NULL AND\n               :newSQL IS NOT NULL AND\n               dbms_sqltune_util0.sqltext_to_signature(sql_text) \n                 NOT IN (SELECT signature\n                         FROM sys.sqlobj$\n                         WHERE obj_type = 2))))))) \n        WHERE executions >= :execs  ORDER BY elapsed_time, executions, cpu_time, disk_reads,\n               buffer_gets, direct_writes )",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/91"
+        }
+      ]
+    },
+    {
+      "idcommands": 92,
+      "dbid": 776972821,
+      "sql_id": "1kz16yhs993h2",
+      "sql_text": "insert into sys.scheduler$_event_log  (log_id, log_date, type#, name, owner, operation, status, user_name,   client_id, guid, dbid, additional_info, destination, credential, class_id,   flags)   values  (:1, SYSTIMESTAMP,   :2, :3, :4, :5, :6, :7, :8, :9, NULL, :10, :11, :12, :13, :14)",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/92"
+        }
+      ]
+    },
+    {
+      "idcommands": 93,
+      "dbid": 776972821,
+      "sql_id": "6mcpb06rctk0x",
+      "sql_text": "call dbms_space.auto_space_advisor_job_proc (  )",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/93"
+        }
+      ]
+    },
+    {
+      "idcommands": 94,
+      "dbid": 776972821,
+      "sql_id": "449qj88xynn5z",
+      "sql_text": "select o.obj# from obj$ o, user$ u where o.type# = 2 and o.owner# = u.user# and dbms_stats_internal.check_advisor_obj_filter(:rule_id, o.obj#, :exec_mode) = 'T' and dbms_stats.get_prefs('INCREMENTAL', dbms_stats_internal.dq(u.name),       dbms_stats_internal.dq(o.name)) = 'TRUE' and dbms_stats_advisor.use_incremental(o.obj#) = 'F' ",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/94"
+        }
+      ]
+    },
+    {
+      "idcommands": 95,
+      "dbid": 776972821,
+      "sql_id": "3sp9hj44p632r",
+      "sql_text": "select 1, max(id) from wri$_adv_objects  where task_id = :1 union all select 2, max(id) from wri$_adv_recommendations  where task_id = :1 union all select 3, max(id) from wri$_adv_actions  where task_id = :1 union all select 4, max(id) from wri$_adv_findings  where task_id = :1 union all select 5, max(id) from wri$_adv_rationale  where task_id = :1 ",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/95"
+        }
+      ]
+    },
+    {
+      "idcommands": 96,
+      "dbid": 776972821,
+      "sql_id": "5uu6gr69xhk48",
+      "sql_text": "SELECT /*+ OPT_PARAM('_parallel_syspls_obey_force' 'false') */ T.PROPERTY FROM SYS.USER$ U, SYS.OBJ$ O, SYS.TAB$ T WHERE U.NAME = :B2 AND U.USER# = O.OWNER# AND O.NAME = :B1 AND O.NAMESPACE = 1 AND O.REMOTEOWNER IS NULL AND O.LINKNAME IS NULL AND O.SUBNAME IS NULL AND O.TYPE# = 2 AND O.OBJ# = T.OBJ#",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/96"
+        }
+      ]
+    },
+    {
+      "idcommands": 97,
+      "dbid": 776972821,
+      "sql_id": "0pv74q6ntgdz5",
+      "sql_text": "select   NULLIF((select count(1) from all_updatable_columns where owner = 'SYS' and table_name = 'EXU81RGS' and (insertable = 'YES' or updatable = 'YES')),0),  (select rowid from SYS.EXU81RGS where rownum = 1) from dual",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/97"
+        }
+      ]
+    },
+    {
+      "idcommands": 98,
+      "dbid": 776972821,
+      "sql_id": "70rzub1pqg6ss",
+      "sql_text": "DECLARE job BINARY_INTEGER := :job;  next_date TIMESTAMP WITH TIME ZONE := :mydate;  broken BOOLEAN := FALSE;  job_name VARCHAR2(128) := :job_name;  job_subname VARCHAR2(128) := :job_subname;  job_owner VARCHAR2(128) := :job_owner;  job_start TIMESTAMP WITH TIME ZONE := :job_start;  job_scheduled_start TIMESTAMP WITH TIME ZONE := :job_scheduled_start;  window_start TIMESTAMP WITH TIME ZONE := :window_start;  window_end TIMESTAMP WITH TIME ZONE := :window_end;  chain_id VARCHAR2(14) :=  :chainid;  credential_owner VARCHAR2(128) := :credown;  credential_name  VARCHAR2(128) := :crednam;  destination_owner VARCHAR2(128) := :destown;  destination_name VARCHAR2(128) := :destnam;  job_dest_id varchar2(14) := :jdestid;  log_id number := :log_id;  BEGIN  xdb.dbms_xdbt.autoSyncJobByCount('XDB.XDB$CI',2,'50M');  :mydate := next_date; IF broken THEN :b := 1; ELSE :b := 0; END IF; END; ",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/98"
+        }
+      ]
+    },
+    {
+      "idcommands": 99,
+      "dbid": 776972821,
+      "sql_id": "8dcyfyh18mx8b",
+      "sql_text": "select   NULLIF((select count(1) from all_updatable_columns where owner = 'SYS' and table_name = 'EXU81RGSU' and (insertable = 'YES' or updatable = 'YES')),0),  (select rowid from SYS.EXU81RGSU where rownum = 1) from dual",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/99"
+        }
+      ]
+    },
+    {
+      "idcommands": 100,
+      "dbid": 776972821,
+      "sql_id": "bbp3ymdk7r5cg",
+      "sql_text": "/* SQL Analyze(1) */ select /*+  full(t)    no_parallel(t) no_parallel_index(t) dbms_stats cursor_sharing_exact use_weak_name_resl dynamic_sampling(0) no_monitoring xmlindex_sel_idx_tbl opt_param('optimizer_inmemory_aware' 'false') no_substrb_pad  */to_char(count(\"LG_TEMP_WAIT\")),substrb(dump(min(\"LG_TEMP_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LG_TEMP_WAIT\"),16,0,64),1,240),to_char(count(\"LG_CONCURRENCY\")),substrb(dump(min(\"LG_CONCURRENCY\"),16,0,64),1,240),substrb(dump(max(\"LG_CONCURRENCY\"),16,0,64),1,240),to_char(count(\"LG_CONTENTION\")),substrb(dump(min(\"LG_CONTENTION\"),16,0,64),1,240),substrb(dump(max(\"LG_CONTENTION\"),16,0,64),1,240),to_char(count(\"LT_JOB_LOG_ID\")),substrb(dump(min(\"LT_JOB_LOG_ID\"),16,0,64),1,240),substrb(dump(max(\"LT_JOB_LOG_ID\"),16,0,64),1,240),to_char(count(\"LT_DATE\")),substrb(dump(min(\"LT_DATE\"),16,0,64),1,240),substrb(dump(max(\"LT_DATE\"),16,0,64),1,240),to_char(count(\"LT_PRIORITY\")),substrb(dump(min(\"LT_PRIORITY\"),16,0,64),1,240),substrb(dump(max(\"LT_PRIORITY\"),16,0,64),1,240),to_char(count(\"LT_TERM_CODE\")),substrb(dump(min(\"LT_TERM_CODE\"),16,0,64),1,240),substrb(dump(max(\"LT_TERM_CODE\"),16,0,64),1,240),to_char(count(\"LT_ERROR\")),substrb(dump(min(\"LT_ERROR\"),16,0,64),1,240),substrb(dump(max(\"LT_ERROR\"),16,0,64),1,240),to_char(count(\"LT_DURATION\")),substrb(dump(min(\"LT_DURATION\"),16,0,64),1,240),substrb(dump(max(\"LT_DURATION\"),16,0,64),1,240),to_char(count(\"LT_CPU_TIME\")),substrb(dump(min(\"LT_CPU_TIME\"),16,0,64),1,240),substrb(dump(max(\"LT_CPU_TIME\"),16,0,64),1,240),to_char(count(\"LT_TEMP\")),substrb(dump(min(\"LT_TEMP\"),16,0,64),1,240),substrb(dump(max(\"LT_TEMP\"),16,0,64),1,240),to_char(count(\"LT_DOP\")),substrb(dump(min(\"LT_DOP\"),16,0,64),1,240),substrb(dump(max(\"LT_DOP\"),16,0,64),1,240),to_char(count(\"LT_IO_RATE\")),substrb(dump(min(\"LT_IO_RATE\"),16,0,64),1,240),substrb(dump(max(\"LT_IO_RATE\"),16,0,64),1,240),to_char(count(\"LT_UNDO_RATE\")),substrb(dump(min(\"LT_UNDO_RATE\"),16,0,64),1,240),substrb(dump(max(\"LT_UNDO_RATE\"),16,0,64),1,240),to_char(count(\"LT_CPU_WAIT\")),substrb(dump(min(\"LT_CPU_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LT_CPU_WAIT\"),16,0,64),1,240),to_char(count(\"LT_IO_WAIT\")),substrb(dump(min(\"LT_IO_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LT_IO_WAIT\"),16,0,64),1,240),to_char(count(\"LT_UNDO_WAIT\")),substrb(dump(min(\"LT_UNDO_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LT_UNDO_WAIT\"),16,0,64),1,240),to_char(count(\"LT_TEMP_WAIT\")),substrb(dump(min(\"LT_TEMP_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LT_TEMP_WAIT\"),16,0,64),1,240),to_char(count(\"LT_CONCURRENCY\")),substrb(dump(min(\"LT_CONCURRENCY\"),16,0,64),1,240),substrb(dump(max(\"LT_CONCURRENCY\"),16,0,64),1,240),to_char(count(\"LT_CONTENTION\")),substrb(dump(min(\"LT_CONTENTION\"),16,0,64),1,240),substrb(dump(max(\"LT_CONTENTION\"),16,0,64),1,240),to_char(count(\"MG_DURATION\")),substrb(dump(min(\"MG_DURATION\"),16,0,64),1,240),substrb(dump(max(\"MG_DURATION\"),16,0,64),1,240),to_char(count(\"MG_CPU_TIME\")),substrb(dump(min(\"MG_CPU_TIME\"),16,0,64),1,240),substrb(dump(max(\"MG_CPU_TIME\"),16,0,64),1,240),to_char(count(\"MG_TEMP\")),substrb(dump(min(\"MG_TEMP\"),16,0,64),1,240),substrb(dump(max(\"MG_TEMP\"),16,0,64),1,240),to_char(count(\"MG_DOP\")),substrb(dump(min(\"MG_DOP\"),16,0,64),1,240),substrb(dump(max(\"MG_DOP\"),16,0,64),1,240),to_char(count(\"MG_IO_RATE\")),substrb(dump(min(\"MG_IO_RATE\"),16,0,64),1,240),substrb(dump(max(\"MG_IO_RATE\"),16,0,64),1,240),to_char(count(\"MG_UNDO_RATE\")),substrb(dump(min(\"MG_UNDO_RATE\"),16,0,64),1,240),substrb(dump(max(\"MG_UNDO_RATE\"),16,0,64),1,240),to_char(count(\"MG_CPU_WAIT\")),substrb(dump(min(\"MG_CPU_WAIT\"),16,0,64),1,240),substrb(dump(max(\"MG_CPU_WAIT\"),16,0,64),1,240),to_char(count(\"MG_IO_WAIT\")),substrb(dump(min(\"MG_IO_WAIT\"),16,0,64),1,240),substrb(dump(max(\"MG_IO_WAIT\"),16,0,64),1,240),to_char(count(\"MG_UNDO_WAIT\")),substrb(dump(min(\"MG_UNDO_WAIT\"),16,0,64),1,240),substrb(dump(max(\"MG_UNDO_WAIT\"),16,0,64),1,240),to_char(count(\"MG_TEMP_WAIT\")),substrb(dump(min(\"MG_TEMP_WAIT\"),16,0,64),1,240),substrb(dump(max(\"MG_TEMP_WAIT\"),16,0,64),1,240),to_char(count(\"MG_CONCURRENCY\")),substrb(dump(min(\"MG_CONCURRENCY\"),16,0,64),1,240),substrb(dump(max(\"MG_CONCURRENCY\"),16,0,64),1,240),to_char(count(\"MG_CONTENTION\")),substrb(dump(min(\"MG_CONTENTION\"),16,0,64),1,240),substrb(dump(max(\"MG_CONTENTION\"),16,0,64),1,240),to_char(count(\"INFO_FIELD_1\")),substrb(dump(min(\"INFO_FIELD_1\"),16,0,64),1,240),substrb(dump(max(\"INFO_FIELD_1\"),16,0,64),1,240),to_char(count(case when \"INFO_FIELD_2\" is null then null else 1 end)),to_char(count(\"INFO_FIELD_3\")),substrb(dump(min(\"INFO_FIELD_3\"),16,0,64),1,240),substrb(dump(max(\"INFO_FIELD_3\"),16,0,64),1,240),to_char(count(\"INFO_FIELD_4\")),substrb(dump(min(\"INFO_FIELD_4\"),16,0,64),1,240),substrb(dump(max(\"INFO_FIELD_4\"),16,0,64),1,240),to_char(count(\"CLIENT_ID\")),substrb(dump(min(\"CLIENT_ID\"),16,0,64),1,240),substrb(dump(max(\"CLIENT_ID\"),16,0,64),1,240),to_char(count(\"OPERATION_ID\")),substrb(dump(min(\"OPERATION_ID\"),16,0,64),1,240),substrb(dump(max(\"OPERATION_ID\"),16,0,64),1,240),to_char(count(\"TARGET_TYPE\")),substrb(dump(min(\"TARGET_TYPE\"),16,0,64),1,240),substrb(dump(max(\"TARGET_TYPE\"),16,0,64),1,240),to_char(count(\"TARGET_NAME\")),substrb(dump(min(\"TARGET_NAME\"),16,0,64),1,240),substrb(dump(max(\"TARGET_NAME\"),16,0,64),1,240),to_char(count(\"ATTRIBUTES\")),substrb(dump(min(\"ATTRIBUTES\"),16,0,64),1,240),substrb(dump(max(\"ATTRIBUTES\"),16,0,64),1,240),to_char(count(\"ATTRIBUTES_OVERRIDE\")),substrb(dump(min(\"ATTRIBUTES_OVERRIDE\"),16,0,64),1,240),substrb(dump(max(\"ATTRIBUTES_OVERRIDE\"),16,0,64),1,240),to_char(count(\"TASK_PRIORITY\")),substrb(dump(min(\"TASK_PRIORITY\"),16,0,64),1,240),substrb(dump(max(\"TASK_PRIORITY\"),16,0,64),1,240),to_char(count(\"PRIORITY_OVERRIDE\")),substrb(dump(min(\"PRIORITY_OVERRIDE\"),16,0,64),1,240),substrb(dump(max(\"PRIORITY_OVERRIDE\"),16,0,64),1,240),to_char(count(\"STATUS\")),substrb(dump(min(\"STATUS\"),16,0,64),1,240),substrb(dump(max(\"STATUS\"),16,0,64),1,240),to_char(count(\"ARG_4\")),substrb(dump(min(\"ARG_4\"),16,0,64),1,240),substrb(dump(max(\"ARG_4\"),16,0,64),1,240),to_char(count(\"ARG_5\")),substrb(dump(min(\"ARG_5\"),16,0,64),1,240),substrb(dump(max(\"ARG_5\"),16,0,64),1,240),to_char(count(\"ARG_6\")),substrb(dump(min(\"ARG_6\"),16,0,64),1,240),substrb(dump(max(\"ARG_6\"),16,0,64),1,240),to_char(count(\"WINDOW_NAME\")),substrb(dump(min(\"WINDOW_NAME\"),16,0,64),1,240),substrb(dump(max(\"WINDOW_NAME\"),16,0,64),1,240),to_char(count(\"CURR_JOB_NAME\")),substrb(dump(min(\"CURR_JOB_NAME\"),16,0,64),1,240),substrb(dump(max(\"CURR_JOB_NAME\"),16,0,64),1,240),to_char(count(\"CURR_WIN_START\")),substrb(dump(min(\"CURR_WIN_START\"),16,0,64),1,240),substrb(dump(max(\"CURR_WIN_START\"),16,0,64),1,240),to_char(count(\"EST_TYPE\")),substrb(dump(min(\"EST_TYPE\"),16,0,64),1,240),substrb(dump(max(\"EST_TYPE\"),16,0,64),1,240),to_char(count(\"EST_WEIGHT\")),substrb(dump(min(\"EST_WEIGHT\"),16,0,64),1,240),substrb(dump(max(\"EST_WEIGHT\"),16,0,64),1,240),to_char(count(\"EST_DURATION\")),substrb(dump(min(\"EST_DURATION\"),16,0,64),1,240),substrb(dump(max(\"EST_DURATION\"),16,0,64),1,240),to_char(count(\"EST_CPU_TIME\")),substrb(dump(min(\"EST_CPU_TIME\"),16,0,64),1,240),substrb(dump(max(\"EST_CPU_TIME\"),16,0,64),1,240),to_char(count(\"EST_TEMP\")),substrb(dump(min(\"EST_TEMP\"),16,0,64),1,240),substrb(dump(max(\"EST_TEMP\"),16,0,64),1,240),to_char(count(\"EST_DOP\")),substrb(dump(min(\"EST_DOP\"),16,0,64),1,240),substrb(dump(max(\"EST_DOP\"),16,0,64),1,240),to_char(count(\"EST_IO_RATE\")),substrb(dump(min(\"EST_IO_RATE\"),16,0,64),1,240),substrb(dump(max(\"EST_IO_RATE\"),16,0,64),1,240),to_char(count(\"EST_UNDO_RATE\")),substrb(dump(min(\"EST_UNDO_RATE\"),16,0,64),1,240),substrb(dump(max(\"EST_UNDO_RATE\"),16,0,64),1,240),to_char(count(\"RETRY_COUNT\")),substrb(dump(min(\"RETRY_COUNT\"),16,0,64),1,240),substrb(dump(max(\"RETRY_COUNT\"),16,0,64),1,240),to_char(count(\"GOOD_COUNT\")),substrb(dump(min(\"GOOD_COUNT\"),16,0,64),1,240),substrb(dump(max(\"GOOD_COUNT\"),16,0,64),1,240),to_char(count(\"LG_JOB_LOG_ID\")),substrb(dump(min(\"LG_JOB_LOG_ID\"),16,0,64),1,240),substrb(dump(max(\"LG_JOB_LOG_ID\"),16,0,64),1,240),to_char(count(\"LG_DATE\")),substrb(dump(min(\"LG_DATE\"),16,0,64),1,240),substrb(dump(max(\"LG_DATE\"),16,0,64),1,240),to_char(count(\"LG_PRIORITY\")),substrb(dump(min(\"LG_PRIORITY\"),16,0,64),1,240),substrb(dump(max(\"LG_PRIORITY\"),16,0,64),1,240),to_char(count(\"LG_DURATION\")),substrb(dump(min(\"LG_DURATION\"),16,0,64),1,240),substrb(dump(max(\"LG_DURATION\"),16,0,64),1,240),to_char(count(\"LG_CPU_TIME\")),substrb(dump(min(\"LG_CPU_TIME\"),16,0,64),1,240),substrb(dump(max(\"LG_CPU_TIME\"),16,0,64),1,240),to_char(count(\"LG_TEMP\")),substrb(dump(min(\"LG_TEMP\"),16,0,64),1,240),substrb(dump(max(\"LG_TEMP\"),16,0,64),1,240),to_char(count(\"LG_DOP\")),substrb(dump(min(\"LG_DOP\"),16,0,64),1,240),substrb(dump(max(\"LG_DOP\"),16,0,64),1,240),to_char(count(\"LG_IO_RATE\")),substrb(dump(min(\"LG_IO_RATE\"),16,0,64),1,240),substrb(dump(max(\"LG_IO_RATE\"),16,0,64),1,240),to_char(count(\"LG_UNDO_RATE\")),substrb(dump(min(\"LG_UNDO_RATE\"),16,0,64),1,240),substrb(dump(max(\"LG_UNDO_RATE\"),16,0,64),1,240),to_char(count(\"LG_CPU_WAIT\")),substrb(dump(min(\"LG_CPU_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LG_CPU_WAIT\"),16,0,64),1,240),to_char(count(\"LG_IO_WAIT\")),substrb(dump(min(\"LG_IO_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LG_IO_WAIT\"),16,0,64),1,240),to_char(count(\"LG_UNDO_WAIT\")),substrb(dump(min(\"LG_UNDO_WAIT\"),16,0,64),1,240),substrb(dump(max(\"LG_UNDO_WAIT\"),16,0,64),1,240),count(rowidtochar(rowid)) from \"SYS\".\"KET$_CLIENT_TASKS\" t  /* NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,ACL,NDV,NIL,NIL,NDV,NIL,NIL,TOPN,NIL,NIL,TOPN,NIL,NIL,TOPN,NIL,NIL,TOPN,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,TOPN,NIL,NIL,TOPN,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,NDV,NIL,NIL,RWID,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254,U254U*/",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/100"
+        }
+      ]
+    },
+    {
+      "idcommands": 0,
+      "dbid": 776972821,
+      "sql_id": "1gfaj4z5hn1kf",
+      "sql_text": "delete from dependency$ where d_obj#=:1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/0"
+        }
+      ]
+    },
+    {
+      "idcommands": 1,
+      "dbid": 776972821,
+      "sql_id": "b9c6ffh8tc71f",
+      "sql_text": "BEGIN dbms_output.enable(NULL); END;",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/1"
+        }
+      ]
+    },
+    {
+      "idcommands": 2,
+      "dbid": 776972821,
+      "sql_id": "7kaq4kd6jc8nk",
+      "sql_text": "select pname, enable_flag, ptxt, pcol, pfschma, ppname, pfname, stmt_type, powner# from fga$ where obj# = :1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/2"
+        }
+      ]
+    },
+    {
+      "idcommands": 3,
+      "dbid": 776972821,
+      "sql_id": "121ffmrc95v7g",
+      "sql_text": "select i.obj#,i.ts#,i.file#,i.block#,i.intcols,i.type#,i.flags,i.property,i.pctfree$,i.initrans,i.maxtrans,i.blevel,i.leafcnt,i.distkey,i.lblkkey,i.dblkkey,i.clufac,i.cols,i.analyzetime,i.samplesize,i.dataobj#,nvl(i.degree,1),nvl(i.instances,1),i.rowcnt,mod(i.pctthres$,256),i.indmethod#,i.trunccnt,nvl(c.unicols,0),nvl(c.deferrable#+c.valid#,0),nvl(i.spare1,i.intcols),i.spare4,i.spare2,i.spare6,decode(i.pctthres$,null,null,mod(trunc(i.pctthres$/256),256)),nvl(i.evaledition#,1),nvl(i.unusablebefore#,0),nvl(i.unusablebeginning#,0), ist.cachedblk,ist.cachehit,ist.logicalread from ind$ i, ind_stats$ ist, (select enabled, min(intcols) unicols,min(to_number(bitand(defer,1))) deferrable#,min(to_number(bitand(defer,4))) valid# from cdef$ where obj#=:1 and enabled > 1 group by enabled) c where i.obj#=c.enabled(+) and i.obj# = ist.obj#(+) and i.bo#=:1 order by i.obj#",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/3"
+        }
+      ]
+    },
+    {
+      "idcommands": 4,
+      "dbid": 776972821,
+      "sql_id": "57guu81bd4bc5",
+      "sql_text": "select name,online$,contents$,undofile#,undoblock#,blocksize,dflmaxext,dflinit,dflincr,dflextpct,dflminext, dflminlen, owner#,scnwrp,scnbas, NVL(pitrscnwrp, 0), NVL(pitrscnbas, 0), dflogging, bitmapped, inc#, flags, plugged, NVL(spare1,0), NVL(spare2,0), affstrength from ts$ where ts#=:1",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/4"
+        }
+      ]
+    },
+    {
+      "idcommands": 5,
+      "dbid": 776972821,
+      "sql_id": "fuadzsvbfwh12",
+      "sql_text": "SELECT /*+ NO_STATEMENT_QUEUING RESULT_CACHE (SYSOBJ=TRUE) OPT_PARAM('_ENABLE_VIEW_PDB', 'FALSE') */ OWNER,OBJECT_NAME,PROCEDURE_NAME,SUBPROGRAM_ID,OVERLOAD,OBJECT_TYPE FROM NO_COMMON_DATA(SYS.\"INT$DBA_PROCEDURES\") \"INT$DBA_PROCEDURES\" WHERE \"INT$DBA_PROCEDURES\".SHARING=0 AND (\"INT$DBA_PROCEDURES\".\"PROCEDURE_NAME\" IS NOT NULL AND \"INT$DBA_PROCEDURES\".\"OBJECT_TYPE\"='PACKAGE' AND \"INT$DBA_PROCEDURES\".\"OWNER\"=q'\"WORK\"')",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sql_commands/5"
+        }
+      ]
+    }
+  ],
+  "hasMore": true,
+  "limit": 25,
+  "offset": 0,
+  "count": 25,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/sql_commands/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/sql_commands/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/sql_commands/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/sql_commands/"
+    },
+    {
+      "rel": "next",
+      "href": "http://localhost:5555/ords/work/sql_commands/?offset=25"
+    }
+  ]
+}

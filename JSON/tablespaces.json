@@ -1,0 +1,152 @@
+{
+  "items": [
+    {
+      "id_tablespace": 0,
+      "name": "AEBD_TABLES",
+      "allocated": 51200,
+      "free": 27000,
+      "used": 24200,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/0"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 1,
+      "name": "APEX_1941389856444596",
+      "allocated": 3208,
+      "free": 2352,
+      "used": 856,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/1"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 2,
+      "name": "SYSAUX",
+      "allocated": 2218359,
+      "free": 2075575,
+      "used": 142784,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/2"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 3,
+      "name": "SYSTEM",
+      "allocated": 2112119,
+      "free": 2067607,
+      "used": 44512,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/3"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 4,
+      "name": "TEMP",
+      "allocated": 2075514,
+      "free": 2075386,
+      "used": 128,
+      "contents": "TEMPORARY",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/4"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 5,
+      "name": "USERS",
+      "allocated": 2077079,
+      "free": 2067695,
+      "used": 9384,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/5"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 6,
+      "name": "USER_TABLE",
+      "allocated": 12800,
+      "free": 12672,
+      "used": 128,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/6"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 7,
+      "name": "WORK_TABLE",
+      "allocated": 12800,
+      "free": 12664,
+      "used": 136,
+      "contents": "PERMANENT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/7"
+        }
+      ]
+    },
+    {
+      "id_tablespace": 8,
+      "name": "WORK_TEMP",
+      "allocated": 2080122,
+      "free": 2080122,
+      "used": 0,
+      "contents": "TEMPORARY",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/tablespaces/8"
+        }
+      ]
+    }
+  ],
+  "hasMore": false,
+  "limit": 25,
+  "offset": 0,
+  "count": 9,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/tablespaces/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/tablespaces/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/tablespaces/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/tablespaces/"
+    }
+  ]
+}

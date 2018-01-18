@@ -1,0 +1,124 @@
+{
+  "items": [
+    {
+      "id_datafile": 9,
+      "name": "/u01/app/oracle/oradata/orcl12c/orcl/system01.dbf",
+      "sized": 44800,
+      "status": "AVAILABLE",
+      "id_table": 3,
+      "max_bytes": 34359721984,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/9"
+        }
+      ]
+    },
+    {
+      "id_datafile": 10,
+      "name": "/u01/app/oracle/oradata/orcl12c/orcl/sysaux01.dbf",
+      "sized": 151040,
+      "status": "AVAILABLE",
+      "id_table": 2,
+      "max_bytes": 34359721984,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/10"
+        }
+      ]
+    },
+    {
+      "id_datafile": 12,
+      "name": "/u01/app/oracle/oradata/orcl12c/orcl/users01.dbf",
+      "sized": 9760,
+      "status": "AVAILABLE",
+      "id_table": 5,
+      "max_bytes": 34359721984,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/12"
+        }
+      ]
+    },
+    {
+      "id_datafile": 13,
+      "name": "/u01/app/oracle/oradata/orcl12c/orcl/APEX_1941389856444596.dbf",
+      "sized": 968,
+      "status": "AVAILABLE",
+      "id_table": 1,
+      "max_bytes": 26279936,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/13"
+        }
+      ]
+    },
+    {
+      "id_datafile": 17,
+      "name": "/u01/app/oracle/product/12.2/db_1/dbs/u01apporacleoradataorcl12orclaebd_tables_01.dbf",
+      "sized": 51200,
+      "status": "AVAILABLE",
+      "id_table": 0,
+      "max_bytes": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/17"
+        }
+      ]
+    },
+    {
+      "id_datafile": 18,
+      "name": "/u01/app/oracle/product/12.2/db_1/dbs/u01apporacleoradataorcl12orcluser_tables_01.dbf",
+      "sized": 12800,
+      "status": "AVAILABLE",
+      "id_table": 6,
+      "max_bytes": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/18"
+        }
+      ]
+    },
+    {
+      "id_datafile": 19,
+      "name": "/u01/app/oracle/product/12.2/db_1/dbs/u01apporacleoradataorcl12orclwork_tables_01.dbf",
+      "sized": 12800,
+      "status": "AVAILABLE",
+      "id_table": 7,
+      "max_bytes": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/datafiles/19"
+        }
+      ]
+    }
+  ],
+  "hasMore": false,
+  "limit": 25,
+  "offset": 0,
+  "count": 7,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/datafiles/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/datafiles/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/datafiles/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/datafiles/"
+    }
+  ]
+}

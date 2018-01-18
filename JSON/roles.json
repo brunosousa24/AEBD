@@ -1,0 +1,280 @@
+{
+  "items": [
+    {
+      "id_role": 2,
+      "name": "CONNECT",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/2"
+        }
+      ]
+    },
+    {
+      "id_role": 3,
+      "name": "RESOURCE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/3"
+        }
+      ]
+    },
+    {
+      "id_role": 4,
+      "name": "DBA",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/4"
+        }
+      ]
+    },
+    {
+      "id_role": 5,
+      "name": "PDB_DBA",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/5"
+        }
+      ]
+    },
+    {
+      "id_role": 6,
+      "name": "AUDIT_ADMIN",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/6"
+        }
+      ]
+    },
+    {
+      "id_role": 7,
+      "name": "AUDIT_VIEWER",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/7"
+        }
+      ]
+    },
+    {
+      "id_role": 10,
+      "name": "SELECT_CATALOG_ROLE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/10"
+        }
+      ]
+    },
+    {
+      "id_role": 11,
+      "name": "EXECUTE_CATALOG_ROLE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/11"
+        }
+      ]
+    },
+    {
+      "id_role": 12,
+      "name": "CAPTURE_ADMIN",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/12"
+        }
+      ]
+    },
+    {
+      "id_role": 14,
+      "name": "EXP_FULL_DATABASE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/14"
+        }
+      ]
+    },
+    {
+      "id_role": 15,
+      "name": "IMP_FULL_DATABASE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/15"
+        }
+      ]
+    },
+    {
+      "id_role": 16,
+      "name": "CDB_DBA",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/16"
+        }
+      ]
+    },
+    {
+      "id_role": 17,
+      "name": "APPLICATION_TRACE_VIEWER",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/17"
+        }
+      ]
+    },
+    {
+      "id_role": 18,
+      "name": "LOGSTDBY_ADMINISTRATOR",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/18"
+        }
+      ]
+    },
+    {
+      "id_role": 19,
+      "name": "DBFS_ROLE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/19"
+        }
+      ]
+    },
+    {
+      "id_role": 20,
+      "name": "GSMUSER_ROLE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/20"
+        }
+      ]
+    },
+    {
+      "id_role": 24,
+      "name": "AQ_ADMINISTRATOR_ROLE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/24"
+        }
+      ]
+    },
+    {
+      "id_role": 25,
+      "name": "AQ_USER_ROLE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/25"
+        }
+      ]
+    },
+    {
+      "id_role": 26,
+      "name": "DATAPUMP_EXP_FULL_DATABASE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/26"
+        }
+      ]
+    },
+    {
+      "id_role": 27,
+      "name": "DATAPUMP_IMP_FULL_DATABASE",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/27"
+        }
+      ]
+    },
+    {
+      "id_role": 28,
+      "name": "ADM_PARALLEL_EXECUTE_TASK",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/28"
+        }
+      ]
+    },
+    {
+      "id_role": 29,
+      "name": "PROVISIONER",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/29"
+        }
+      ]
+    },
+    {
+      "id_role": 30,
+      "name": "XS_SESSION_ADMIN",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/30"
+        }
+      ]
+    },
+    {
+      "id_role": 31,
+      "name": "XS_NAMESPACE_ADMIN",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/31"
+        }
+      ]
+    },
+    {
+      "id_role": 32,
+      "name": "XS_CACHE_ADMIN",
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/roles/32"
+        }
+      ]
+    }
+  ],
+  "hasMore": true,
+  "limit": 25,
+  "offset": 0,
+  "count": 25,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/roles/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/roles/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/roles/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/roles/"
+    },
+    {
+      "rel": "next",
+      "href": "http://localhost:5555/ords/work/roles/?offset=25"
+    }
+  ]
+}

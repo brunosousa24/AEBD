@@ -1,0 +1,405 @@
+{
+  "items": [
+    {
+      "id_user": 0,
+      "name": "SYS",
+      "status": "OPEN",
+      "exp_date": null,
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 3,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/0"
+        }
+      ]
+    },
+    {
+      "id_user": 9,
+      "name": "SYSTEM",
+      "status": "OPEN",
+      "exp_date": null,
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 3,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/9"
+        }
+      ]
+    },
+    {
+      "id_user": 2147483638,
+      "name": "XS$NULL",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 3,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/2147483638"
+        }
+      ]
+    },
+    {
+      "id_user": 101,
+      "name": "LBACSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 3,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/101"
+        }
+      ]
+    },
+    {
+      "id_user": 13,
+      "name": "OUTLN",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 3,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/13"
+        }
+      ]
+    },
+    {
+      "id_user": 54,
+      "name": "DBSNMP",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/54"
+        }
+      ]
+    },
+    {
+      "id_user": 55,
+      "name": "APPQOSSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/55"
+        }
+      ]
+    },
+    {
+      "id_user": 35,
+      "name": "DBSFWUSER",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/35"
+        }
+      ]
+    },
+    {
+      "id_user": 60,
+      "name": "GGSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/60"
+        }
+      ]
+    },
+    {
+      "id_user": 63,
+      "name": "ANONYMOUS",
+      "status": "OPEN",
+      "exp_date": null,
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/63"
+        }
+      ]
+    },
+    {
+      "id_user": 108,
+      "name": "FLOWS_FILES",
+      "status": "OPEN",
+      "exp_date": null,
+      "temp_tablespace": "TEMP",
+      "created": "2017-06-12T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/108"
+        }
+      ]
+    },
+    {
+      "id_user": 84,
+      "name": "CTXSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-06-12T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/84"
+        }
+      ]
+    },
+    {
+      "id_user": 117,
+      "name": "ORDS_METADATA",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-06-12T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-06-12T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/117"
+        }
+      ]
+    },
+    {
+      "id_user": 89,
+      "name": "SI_INFORMTN_SCHEMA",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/89"
+        }
+      ]
+    },
+    {
+      "id_user": 1279990,
+      "name": "DVSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/1279990"
+        }
+      ]
+    },
+    {
+      "id_user": 103,
+      "name": "DVF",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/103"
+        }
+      ]
+    },
+    {
+      "id_user": 21,
+      "name": "GSMADMIN_INTERNAL",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/21"
+        }
+      ]
+    },
+    {
+      "id_user": 88,
+      "name": "ORDPLUGINS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/88"
+        }
+      ]
+    },
+    {
+      "id_user": 110,
+      "name": "APEX_050100",
+      "status": "OPEN",
+      "exp_date": null,
+      "temp_tablespace": "TEMP",
+      "created": "2017-06-12T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/110"
+        }
+      ]
+    },
+    {
+      "id_user": 90,
+      "name": "MDSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/90"
+        }
+      ]
+    },
+    {
+      "id_user": 93,
+      "name": "OLAPSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/93"
+        }
+      ]
+    },
+    {
+      "id_user": 87,
+      "name": "ORDDATA",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/87"
+        }
+      ]
+    },
+    {
+      "id_user": 62,
+      "name": "XDB",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/62"
+        }
+      ]
+    },
+    {
+      "id_user": 72,
+      "name": "WMSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/72"
+        }
+      ]
+    },
+    {
+      "id_user": 86,
+      "name": "ORDSYS",
+      "status": "EXPIRED & LOCKED",
+      "exp_date": "2017-01-26T00:00:00Z",
+      "temp_tablespace": "TEMP",
+      "created": "2017-01-26T00:00:00Z",
+      "id_tablespace": 2,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/users/86"
+        }
+      ]
+    }
+  ],
+  "hasMore": true,
+  "limit": 25,
+  "offset": 0,
+  "count": 25,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/users/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/users/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/users/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/users/"
+    },
+    {
+      "rel": "next",
+      "href": "http://localhost:5555/ords/work/users/?offset=25"
+    }
+  ]
+}

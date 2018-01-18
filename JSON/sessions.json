@@ -1,0 +1,480 @@
+{
+  "items": [
+    {
+      "id_tab_session": 327,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 0,
+      "time_waited": 188730,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/327"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 328,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "b13g21mgg8y98",
+      "wait_time": 0,
+      "time_waited": 138807,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/328"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 329,
+      "session_id": 67,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "LOAD TABLE CONVENTIONAL",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "avf5k3k0x0cxn",
+      "wait_time": 0,
+      "time_waited": 999997,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/329"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 330,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 169506,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/330"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 331,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "3kqrku32p6sfn",
+      "wait_time": 0,
+      "time_waited": 13618,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/331"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 332,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 0,
+      "time_waited": 160489,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/332"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 333,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "3kqrku32p6sfn",
+      "wait_time": 0,
+      "time_waited": 224817,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/333"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 334,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 0,
+      "time_waited": 41667,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/334"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 335,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "3kqrku32p6sfn",
+      "wait_time": 41598,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/335"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 336,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 0,
+      "time_waited": 43986,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/336"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 337,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "5rurx5xtjwcu2",
+      "wait_time": 0,
+      "time_waited": 98757,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/337"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 338,
+      "session_id": 47,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "null",
+      "wait_time": 0,
+      "time_waited": 2294925,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/338"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 339,
+      "session_id": 52,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "cubcqrdcjb3mz",
+      "wait_time": 3677,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/339"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 340,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 0,
+      "time_waited": 9776,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/340"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 341,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "5pj6mtazkhmdd",
+      "wait_time": 0,
+      "time_waited": 113836,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/341"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 342,
+      "session_id": 47,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "null",
+      "wait_time": 0,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/342"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 343,
+      "session_id": 52,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "8vnjxtfyy84as",
+      "wait_time": 8538,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/343"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 344,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 1638,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/344"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 345,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "5pj6mtazkhmdd",
+      "wait_time": 0,
+      "time_waited": 44606,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/345"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 346,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 33969,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/346"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 347,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "5pj6mtazkhmdd",
+      "wait_time": 0,
+      "time_waited": 55160,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/347"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 348,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 0,
+      "time_waited": 558033,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/348"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 349,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "5pj6mtazkhmdd",
+      "wait_time": 0,
+      "time_waited": 258014,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/349"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 350,
+      "session_id": 56,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "null",
+      "session_type": "BACKGROUND",
+      "session_state": "ON CPU",
+      "user_id": 0,
+      "sql_id": "cnq31548hb8un",
+      "wait_time": 1766,
+      "time_waited": 0,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/350"
+        }
+      ]
+    },
+    {
+      "id_tab_session": 351,
+      "session_id": 63,
+      "sample_time_utc": "2018-01-18T00:00:00Z",
+      "sql_plan_operation": "UPDATE",
+      "session_type": "BACKGROUND",
+      "session_state": "WAITING",
+      "user_id": 0,
+      "sql_id": "aaz3bayav0jwj",
+      "wait_time": 0,
+      "time_waited": 27322,
+      "links": [
+        {
+          "rel": "self",
+          "href": "http://localhost:5555/ords/work/sessions/351"
+        }
+      ]
+    }
+  ],
+  "hasMore": true,
+  "limit": 25,
+  "offset": 0,
+  "count": 25,
+  "links": [
+    {
+      "rel": "self",
+      "href": "http://localhost:5555/ords/work/sessions/"
+    },
+    {
+      "rel": "edit",
+      "href": "http://localhost:5555/ords/work/sessions/"
+    },
+    {
+      "rel": "describedby",
+      "href": "http://localhost:5555/ords/work/metadata-catalog/sessions/"
+    },
+    {
+      "rel": "first",
+      "href": "http://localhost:5555/ords/work/sessions/"
+    },
+    {
+      "rel": "next",
+      "href": "http://localhost:5555/ords/work/sessions/?offset=25"
+    }
+  ]
+}
