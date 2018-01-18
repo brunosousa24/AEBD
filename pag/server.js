@@ -14,16 +14,26 @@ app.get('/', (req,res) => {
 })
 
 
-app.get('/app/cpu/:metricas',(req,res) => {
-	/*db.getConnection(	{
-    user          : "Work",
-    password      : "work1",
-    connectString: "localhost/orcl"
-  	},*/
-
+app.get('/app/cpu',(req,res) => {
 
 	res.render('cpu');
   });
+
+
+app.get('/app/memstorage',(req,res) => {
+
+	res.render('memstorage');
+  });
+
+app.get('/app/roles',(req,res) => {
+
+	res.render('roles');
+  });
+
+app.listen(5555 , () => {
+	console.log("Servidor iniciado!");
+})
+
 
     /*connection.execute(
       "SELECT DBID FROM CPU",
@@ -53,8 +63,4 @@ app.doRelease = function(connection) {
 };
 */
 
-
-app.listen(5555 , () => {
-	console.log("Servidor iniciado!");
-})
 
