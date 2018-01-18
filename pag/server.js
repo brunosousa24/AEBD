@@ -15,19 +15,18 @@ app.get('/', (req,res) => {
 
 
 app.get('/app/cpu/:metricas',(req,res) => {
-	db.getConnection(	{
+	/*db.getConnection(	{
     user          : "Work",
     password      : "work1",
     connectString: "localhost/orcl"
-  	},
-  function(err, connection)
-  {
-    if (err) {
-      console.error(err.message);
-      return;
-    }
-    connection.execute(
-      "SELECT DBID FROM  CPU",
+  	},*/
+
+
+	res.render('cpu');
+  });
+
+    /*connection.execute(
+      "SELECT DBID FROM CPU",
       function(err, result)
       {
         if (err) {
@@ -35,32 +34,14 @@ app.get('/app/cpu/:metricas',(req,res) => {
           app.doRelease(connection);
           return;
         }
-        //console.log(result.rows);
 
-        var obj = {};
-		obj.array=[];
-		var array = result.rows;
-		var arrayLength = array.length;
-		for(var i =  0 ; i < arrayLength ;  i++){
-			var aux = {}
-			aux.exemplo = array[i][0]
-			obj.array.push(aux)
-		}
-
-		res.render('cpu', obj)
+		res.render('cpu', res)
         app.doRelease(connection);
       });
 	});
 });
 
-	/*
-		Fazer ligação a BD
-	*/
-	// Query
-	/*
-		Obtens um array de rows do select
-	*/
-	//Conversão
+
 	
 app.doRelease = function(connection) {
     connection.release(function(err) {
@@ -70,6 +51,7 @@ app.doRelease = function(connection) {
         return;
     });
 };
+*/
 
 
 app.listen(5555 , () => {
