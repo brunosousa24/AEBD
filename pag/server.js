@@ -7,20 +7,18 @@ var db = require('oracledb');
 
 app.set('view engine', 'pug');
 
+app.use(express.static(__dirname+'/javascripts'))
+
 app.get('/', (req,res) => {
 	res.render('index');
 })
 
+
 app.get('/app/cpu/:metricas',(req,res) => {
-	if(req.params.metricas == null){
-		res.render('cpu')
-	}else{
-
-
 	db.getConnection(	{
     user          : "Work",
     password      : "work1",
-    connectString : "localhost/1521"
+    connectString: "localhost/orcl"
   	},
   function(err, connection)
   {
@@ -29,12 +27,12 @@ app.get('/app/cpu/:metricas',(req,res) => {
       return;
     }
     connection.execute(
-      "SELECT "+req.params.metricas+"FROM  CPU",
+      "SELECT DBID FROM  CPU",
       function(err, result)
       {
         if (err) {
           console.error(err.message);
-          doRelease(connection);
+          app.doRelease(connection);
           return;
         }
         //console.log(result.rows);
@@ -42,7 +40,7 @@ app.get('/app/cpu/:metricas',(req,res) => {
         var obj = {};
 		obj.array=[];
 		var array = result.rows;
-		var arrayLength = array.length();
+		var arrayLength = array.length;
 		for(var i =  0 ; i < arrayLength ;  i++){
 			var aux = {}
 			aux.exemplo = array[i][0]
@@ -50,10 +48,11 @@ app.get('/app/cpu/:metricas',(req,res) => {
 		}
 
 		res.render('cpu', obj)
-        doRelease(connection);
+        app.doRelease(connection);
       });
+	});
 });
-}
+
 	/*
 		Fazer ligação a BD
 	*/
@@ -63,10 +62,14 @@ app.get('/app/cpu/:metricas',(req,res) => {
 	*/
 	//Conversão
 	
-
-
-	
-})
+app.doRelease = function(connection) {
+    connection.release(function(err) {
+        if (err) {
+            console.log("ERROR: Unable to RELEASE the connection: ", err);
+        }
+        return;
+    });
+};
 
 
 app.listen(5555 , () => {
