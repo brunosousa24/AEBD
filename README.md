@@ -1,36 +1,17 @@
 # AEBD
-
-## Comandos SQL
-   * cpu seconds
-   * tempo de execução(elapsed time)
-   * Module
-   * Data
-   * Execuções
-   * User
+Desenvolvimento de uma interface web que analisa os principais parâmetros de avaliação de performance de uma BD Oracle.
 
 
+## Contribuidores
+* [Ricardo Certo](https://github.com/ricardocerto16)
+* [Adriana Guedes](https://github.com/adrianasg122)
+* [Marco Barbosa](https://github.com/31marcobarbosa)
+* [Bruno Sousa](https://github.com/brunosousa24)
 
 
-## Memory Storage
-    SGA
+## Como visualizar página web
+Na diretoria AEBD/pag executar os seguintes comandos:  
+* Instalar : npm install
+* Iniciar o Servidor : npm start
+* Pré-requesito ter o Node.js instalado
 
-
-
-## CPU
-    usage (%)
-
-
-## WAIT TIME
-
-
-## Sessions
-
-
-## Processes (SQL Developer - Instance Viewer)
-
-## views para as tabelas de cima: 
-* DBA_HIST_SNAPSHOT
-* DBA_HIST_SQLTEXT
-* DBA_HIST-SQLSTAT
-* V$SGA
-* V$ACTIVE_SESSION_HISTORY
