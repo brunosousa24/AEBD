@@ -15,52 +15,41 @@ app.get('/', (req,res) => {
 
 
 app.get('/app/cpu',(req,res) => {
-
 	res.render('cpu');
   });
 
 
 app.get('/app/memstorage',(req,res) => {
-
-	res.render('memstorage');
+	var mem = require('../Json/memory_storage.json')
+	res.render('memstorage', {items:mem.items});
   });
 
-app.get('/app/roles',(req,res) => {
 
-	res.render('roles');
+app.get('/app/roles',(req,res) => {
+	var roles = require('../Json/roles.json')
+	res.render('roles', {items:roles.items});
+  });
+
+
+app.get('/app/users',(req,res) => {
+	var users = require('../Json/users.json')
+	res.render('users', {items:users.items});
+  });
+
+app.get('/app/sql',(req,res) => {
+	var sqlc = require('../Json/sql.json')
+	res.render('sql', {items:sqlc.items});
+  });
+
+
+app.get('/app/datafiles',(req,res) => {
+	var sqlc = require('../Json/datafiles.json')
+	res.render('dataf', {items:sqlc.items});
   });
 
 app.listen(5555 , () => {
 	console.log("Servidor iniciado!");
 })
 
-
-    /*connection.execute(
-      "SELECT DBID FROM CPU",
-      function(err, result)
-      {
-        if (err) {
-          console.error(err.message);
-          app.doRelease(connection);
-          return;
-        }
-
-		res.render('cpu', res)
-        app.doRelease(connection);
-      });
-	});
-});
-
-
-	
-app.doRelease = function(connection) {
-    connection.release(function(err) {
-        if (err) {
-            console.log("ERROR: Unable to RELEASE the connection: ", err);
-        }
-        return;
-    });
-};
-*/
 
 
