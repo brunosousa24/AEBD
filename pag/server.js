@@ -3,7 +3,7 @@ Iniciar servidor que trata de pedidos
 */
 var express = require('express');
 var app = express();
-var db = require('oracledb');
+
 
 app.set('view engine', 'pug');
 
@@ -33,6 +33,7 @@ app.get('/app/roles',(req,res) => {
 
 app.get('/app/users',(req,res) => {
 	var users = require('../Json/users.json')
+	//console.log(users)
 	res.render('users', {items:users.items});
   });
 
@@ -43,8 +44,13 @@ app.get('/app/sql',(req,res) => {
 
 
 app.get('/app/datafiles',(req,res) => {
-	var sqlc = require('../Json/datafiles.json')
-	res.render('dataf', {items:sqlc.items});
+	var s = require('../Json/datafiles.json')
+	res.render('dataf', {items:s.items});
+  });
+
+app.get('/app/tablespaces',(req,res) => {
+	var s = require('../Json/tablespaces.json')
+	res.render('tablespaces', {items:s.items});
   });
 
 app.listen(5555 , () => {
