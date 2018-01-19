@@ -3,6 +3,7 @@ Iniciar servidor que trata de pedidos
 */
 var express = require('express');
 var app = express();
+var cjson = require('cjson');
 
 
 app.set('view engine', 'pug');
@@ -38,7 +39,7 @@ app.get('/app/users',(req,res) => {
   });
 
 app.get('/app/sql',(req,res) => {
-	var sqlc = require('../Json/sql.json')
+	var sqlc = require('./Json/sql.json')
 	res.render('sql', {items:sqlc.items});
   });
 
@@ -52,6 +53,13 @@ app.get('/app/tablespaces',(req,res) => {
 	var s = require('../Json/tablespaces.json')
 	res.render('tablespaces', {items:s.items});
   });
+
+app.get('/app/tablespaces/json',(req,res) => {
+	var mem = cjson.load('./Json/tablespaces.json')
+	//console.log(mem)
+	res.json(mem)
+	});
+
 
 app.listen(5555 , () => {
 	console.log("Servidor iniciado!");
