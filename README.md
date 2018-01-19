@@ -10,7 +10,8 @@ Desenvolvimento de uma interface web que analisa os principais parâmetros de av
 
 
 ## Como visualizar página web
-Na diretoria AEBD/pag executar os seguintes comandos: 
+Na diretoria AEBD/pag executar os seguintes comandos:  
 * Instalar : npm install
 * Iniciar o Servidor : npm start
+P.S : Pré-requesito ter o Node.js instalado
 
