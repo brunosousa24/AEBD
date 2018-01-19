@@ -46,6 +46,14 @@ let tbspaceChart = new Chart(TBSPACECHART,{
       ]
     },
     options: {
+      scales: {
+        xAxes: [{
+          barPercentage: 0.3
+        }],
+        yAxes: [{
+          barPercentage: 0.3
+        }]
+      },
       legend: { display: false },
       title: {
         display: true,

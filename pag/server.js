@@ -14,17 +14,23 @@ app.get('/', (req,res) => {
 	res.render('index');
 })
 
-
 app.get('/app/cpu',(req,res) => {
-	res.render('cpu');
+	var cpu = require('../Json/cpu.json')
+	res.render('cpu', {items:cpu.items});
   });
 
 
 app.get('/app/memstorage',(req,res) => {
 	var mem = require('../Json/memory_storage.json')
 	res.render('memstorage', {items:mem.items});
-  });
+	});
 
+
+
+app.get('/app/memstorage/json',(req,res) => {
+	var mem = cjson.load('../Json/memory_storage.json')
+		res.json(mem)
+		});
 
 app.get('/app/roles',(req,res) => {
 	var roles = require('../Json/roles.json')
@@ -56,9 +62,13 @@ app.get('/app/tablespaces',(req,res) => {
 
 app.get('/app/tablespaces/json',(req,res) => {
 	var mem = cjson.load('./Json/tablespaces.json')
-	//console.log(mem)
 	res.json(mem)
 	});
+
+app.get('/app/sessions',(req,res) => {
+	var s = require('../Json/sessions.json')
+	res.render('sessions', {items:s.items});
+  });
 
 
 app.listen(5555 , () => {

@@ -1,6 +1,21 @@
 extends layout
 
-block bodyContent
-	h1 CPU
-
+block scripts
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
 	
+
+block bodyContent
+	
+	h1 CPU
+	div()
+		table(class="w3-table-all" id="table")
+			tr
+				each val,tag in items[0]
+					if tag!="links"
+						th=tag
+			each item in items
+				tr
+					each val,tag in item
+						if tag!="links"
+							td=val
